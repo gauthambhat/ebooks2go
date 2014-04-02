@@ -333,7 +333,7 @@ namespace eBooks2goV5.dal
         #region get countries
         public DataTable getstates(States _state)
         {
-            //SqlConnection con = new SqlConnection(ConnectionString);
+            SqlConnection con = new SqlConnection(ConnectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand("getstates", con);
             cmd.CommandType = CommandType.StoredProcedure;
