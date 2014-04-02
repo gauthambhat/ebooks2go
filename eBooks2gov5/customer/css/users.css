@@ -1,0 +1,276 @@
+@charset "utf-8";
+/* CSS Document */
+
+.users, .usersList, .addClumn{
+	
+	border-collapse:collapse;	
+	width:85%;
+	margin:0 auto;
+	margin-top:3em;
+}
+.users th{
+	text-align: right;
+	background-color: transparent;
+	width: 30%;
+	height: 3em;
+	vertical-align: top;
+	line-height: 3em;
+	cursor: pointer;
+}
+
+.users tr, .paypal_info, .bankinfo table tr{
+	border-bottom:#c5c5c5 dashed thin;	
+}
+.users tr:last-child, .paypal_info:last-child, .bankinfo table tr:last-child{
+	border:none;	
+}
+.users tr td{
+	padding-left:2em;
+}
+
+#search, .users tr td input[type="text"], .users tr td input[type="password"], textarea{
+	width:75%;	
+	border:#d2d2d2 thin solid;
+	padding:0.2em;
+}
+#search{
+	width:50%;
+}
+textarea{
+	margin-top:0.5em;
+	margin-bottom:0.5em;	
+}
+input[type="submit"]{
+	height:32px;
+	background-image:url(../images/bgSubmit.png);
+	background-repeat:repeat-x;
+	border-radius:5px;
+	border:solid 2px #26a6c1;
+	color:#fff;
+	width:116px;
+	font-weight:bold;
+	cursor:pointer;	
+}
+input[type="submit"]:hover{
+	background-image:url(../images/bgSubmit_over.png);	
+}
+input[type="reset"], input[type="button"]{
+	height:32px;
+	background-image:url(../images/bgCancel.png);
+	background-repeat:repeat-x;
+	border-radius:5px;
+	border:solid 2px #b42b33;
+	color:#fff;
+	width:70px;
+	font-weight:bold;
+	cursor:pointer;		
+}
+input[type="button"]{
+		background-image:url(../images/bgButton.png);
+		border:solid 2px #43d967;
+		color:#333;
+		width:auto;
+		padding-left:1em;
+		padding-right:1em;
+}
+
+input[type="reset"]:hover{
+	background-image:url(../images/bgCancel_over.png);	
+}
+input[type="file"]{
+	vertical-align:middle;
+	display:inline-block;
+	cursor:pointer;
+	display:none;
+}
+#upload_avtar{
+	width:12em;	
+	padding:0.3em;
+	padding-right:2em;
+	background-image:url(icons/plus.png);
+	background-position:right center;
+	background-repeat:no-repeat;
+	background-size:auto 100%;
+	cursor:pointer;
+	display:inline-block;
+}
+
+ .usersList{
+		width:95%;
+		border: thin solid #cecece;
+		background-color:#fafafa;
+		margin-top:0.6em;
+ }
+ .usersList tr{
+	 height:2.5em;
+	 line-height:2.5em;
+ }
+
+.usersList th{
+		background-image:url(icons/sort.png), url(../images/breadBg.jpg);
+		background-repeat: no-repeat, repeat;
+		background-size:auto auto, auto 100%;
+		background-position:98% 50%;
+		font-weight:normal;
+		cursor:pointer;
+}
+.usersList th:last-child{
+		background-image: url(../images/breadBg.jpg);
+		background-repeat: repeat;
+		background-size:auto 100%;
+		background-position:90% 50%;
+		width:6em;
+		cursor:default;
+}
+.usersList img:first-child{
+	margin-left:-1em;	
+}
+
+.usersList td{
+	padding-left:1em;	
+}
+
+.usersList .tabIcons img{
+	margin-top:0.4em;	
+	cursor:pointer;
+	padding-left:0;	
+}
+.addColumn{
+	border: none;
+	margin: 0 auto;
+	margin-top: 2em;
+}
+
+.addColumn img{
+	width: 20px;
+	height: auto;
+	cursor: pointer;
+}
+.bankinfo{
+	margin-bottom: 1em;
+	box-shadow: 0 0 2px 1px #c6c6c6;
+}
+.bankinfoHeight{
+	height:3em;	
+}
+.bankinfo .bankCount{
+	position:absolute;
+	left:2em;
+	width:2em;
+	background-image:url(../images/dark.png);
+	background-repeat:repeat;
+	background-color:#333;
+	color:#fff;	
+}
+
+.bankinfo table{
+	border-collapse: collapse;
+	display: bloack;
+	
+	padding:1.5em;
+	padding-top:0.5em;
+	cursor: auto;
+	width:100%;
+	margin:0 auto;
+}
+.bankinfo table tr.bankInfoHeading{
+	display:table-row !important;
+	text-align: center !important;
+	position:relative !important;
+	color: #000;
+	background-image: url(../images/breadBg.jpg) !important;
+	background-repeat: repeat !important;
+	background-size: auto 100% !important;
+	cursor: auto;
+	
+}
+th.paypalInfoHeading{
+	position:relative;
+	width:100%;
+	text-align:center;
+	background-image: url(../images/breadBg.jpg) !important;
+	background-repeat: repeat !important;
+	background-size: auto 100% !important;
+}
+th.bankInfoHeading{
+	cursor:pointer !important;	
+	background-image:url(icons/down_arrow.png), url(../images/breadBg.jpg) !important;
+	background-repeat:no-repeat, repeat-x;
+	background-position:97% 50% ;
+	background-size:auto 50%, auto 100% !important;
+	text-align:center !important;
+}
+
+.bankinfo .subHead{
+	text-align:left;
+	background-color:#fcfcfc !important;
+	height:3em !important;
+	font-size:1em !important;
+	color:#666;	
+	padding-left:2em;
+}
+.bankinfo td{
+	text-align:left;
+	font-weight:normal;
+	height:3em;
+		
+}
+
+.bankinfo th{
+	position:relative;
+	width:20% !important;
+	text-align:right;
+}
+.bankinfo td{
+	width:30% !important;
+}
+
+.radiocheck{
+	margin-right:2em;	
+}
+#bankandtaxinfo{
+	display: none;
+	border: none;
+	text-align: right;
+}
+#dataTable input[type='text'], .bankinfo td input[type='text']{
+		border:#d2d2d2 thin solid;
+		padding:0.2em;
+		margin-left:-1em;
+	}
+
+#ifUS input[type="radio"], .bankinfo td input[type="radio"] {
+		margin-top:-20px;
+		display:inline-block;
+}
+label img{
+		height:30px;
+		width:auto;	
+}
+#select_royelty{
+	display:none;	
+}
+.optional{
+		font-weight:normal;
+		font-style:italic;
+}
+
+div::-webkit-scrollbar{
+	width: .7em; 
+	height: .5em; 
+	background: #ffffff;
+	 }
+div::-webkit-scrollbar-thumb { 
+background-color: #c7b7aa; 
+-webkit-border-radius: 1ex; 
+}
+.bankinfo td input[type='text'], select{
+		margin-left:0.3em !important;	
+	}
+	
+	.expandState{
+		overflow-y:auto;
+	}
+	.heightAuto{
+		height:auto;	
+	}

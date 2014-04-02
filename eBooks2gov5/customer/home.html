@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Dashboard</title>
+<script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="js/jquery.tooltipster.js" type="text/javascript"></script>
+<script src="js/highcharts.js" type="text/javascript"></script>
+<script src="js/jquery.highchartTable.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/charts.js"></script>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link href="css/charts.css" rel="stylesheet" type="text/css" />
+<link href="css/media.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="header"> <img src="images/logo.png" id="logo" alt="logo" />
+  <ul>
+    <li>
+      <div class="notification"  title="Notifications" style="background-image:url(css/icons/bell.png); background-position:50% 50%; background-repeat:no-repeat; height:100%; width:100%;">
+        <div class="alert" style="background-color:#ff5b24">12</div>
+      </div>
+    </li>
+    <li class="avtarStatus">
+      <div class="adminSection" style="background-image:url(css/icons/avtar.png), url(css/icons/down.png); background-position:0 50%, 90% 50%; background-repeat:no-repeat;" onclick="showHideAdmin()"><span id="adminText">Admin</span></div>
+    </li>
+    <li style="width:80px;">
+      <div style="width:80px; height:100%; background-image:url(css/icons/logout.png); background-position:0.5em 50%; background-repeat:no-repeat;"><span style="margin-left:1.55em">Logout</span></div>
+    </li>
+    <li>
+      <div  class="notification" title="Help" style="background-image:url(css/icons/help.png); background-position:50% 50%; background-repeat:no-repeat; height:100%; width:100%;"></div>
+    </li>
+  </ul>
+  <div class="adminDown">
+    <p><a href="#">View/Edit Profile</a></p>
+    <hr/>
+    <p><a href="#">Change Profile Pic</a></p>
+  </div>
+</div>
+<div class="breadCrumps">
+  <div id="leftBread">
+    <ul>
+      <li></li>
+      <li><span style="margin-left:1em; display:block; line-height:30px;">Dashboard</span></li>
+    </ul>
+  </div>
+  <input type="text" />
+</div>
+<div class="navigation">
+  <div id="header">Navigation</div>
+  <div class="navIconsSml"> <a href="#">
+    <div class="iconsLeft tooltip" title="Calander" style="background-color:#1882fe;"><img src="css/icons/calander.png" alt="calancer" /></div>
+    </a> <a href="#">
+    <div class="iconsLeft tooltip" title="Stored Reports" style="background-color:#f07c55;"><img src="css/icons/folder.png" alt="folder" /></div>
+    </a> <a href="#">
+    <div class="iconsLeft tooltip" title="Reports" style="background-color:#a1c466;"><img src="css/icons/reports.png"  alt="reports" /></div>
+    </a> <a href="#">
+    <div class="iconsLeft tooltip" title="Messages" style="background-color:#8abac8;"><img src="css/icons/messages.png" alt="messages" /></div>
+    </a> <a href="#">
+    <div class="iconsLeft tooltip" title="Notes" style="background-color:#e5c000;"><img src="css/icons/notes.png"  alt="notes" /></div>
+    </a> </div>
+  <div class="iconsRight">
+    <div class="iconsBig">
+      <div style="background-image:url(css/icons/users.png);">
+        <p>Users</p>
+      </div>
+      <div class="alert" style="background-color:#ff5b24">12</div>
+    </div>
+    <div class="iconsBig">
+      <div style="background-image:url(css/icons/customers.png);">
+        <p>Customers</p>
+      </div>
+      <div class="alert" style="background-color:#0d7afa">12</div>
+    </div>
+    <div class="iconsBig">
+      <div style="background-image:url(css/icons/services.png);">
+        <p>Services</p>
+      </div>
+      <div class="alert" style="background-color:#8cc926">12</div>
+    </div>
+    <div class="iconsBig">
+      <div style="background-image:url(css/icons/orders.png);">
+        <p>Orders</p>
+      </div>
+      <div class="alert" style="background-color:#399ab6">12</div>
+    </div>
+    <div class="iconsBig">
+      <div style="background-image:url(css/icons/upsells.png);">
+        <p>Upsells</p>
+      </div>
+      <div class="alert" style="background-color:#e0be0d">12</div>
+    </div>
+    <div class="iconsBig">
+      <div style="background-image:url(css/icons/news.png);">
+        <p>News & Events</p>
+      </div>
+      <div class="alert" style="background-color:#ff5b24">12</div>
+    </div>
+    <div class="iconsBig">
+      <div style="background-image:url(css/icons/testimonials.png);">
+        <p>Testimonials</p>
+      </div>
+      <div class="alert" style="background-color:#0d7afa">12</div>
+    </div>
+    <div class="iconsBig">
+      <div style="background-image:url(css/icons/bannerAds.png);">
+        <p>Banner Admin</p>
+      </div>
+      <div class="alert" style="background-color:#8cc926">12</div>
+    </div>
+    <div class="iconsBig">
+      <div style="background-image:url(css/icons/salesReports.png);">
+        <p>Sales Reports</p>
+      </div>
+      <div class="alert" style="background-color:#399ab6">12</div>
+    </div>
+    <div class="iconsBig">
+      <div style="background-image:url(css/icons/inbox.png);">
+        <p>Inbox</p>
+      </div>
+      <div class="alert" style="background-color:#e0be0d">12</div>
+    </div>
+  </div>
+  <div class="bottomLeft"></div>
+</div>
+<div class="maincontent">
+<table class="contentTitle" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <th align="left"><span style="margin-left:0.5em;-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; line-height:0em;">Orders</span></th>
+      <th align="right"><span style="margin-right:0.5em;">
+        <select name="month">
+          <option>Current Month</option>
+        </select>
+        </span></th>
+    </tr>
+  </table>
+  <div class="contentCharts">
+    <div class="headerWrap">
+      <div class="chartheader"> <span style="margin-left:4em;">New Orders </span> </div>
+    </div>
+    <table  style="display:none" class="highchart" data-graph-container-before="1" data-graph-type="area" data-graph-height="150" data-graph-legend-disabled="0"  data-graph-color-1="#1882fe">
+      <thead>
+        <tr>
+          <th>Days</th>
+          <th>Reports</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>6000</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>13000</td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td>12000</td>
+        </tr>
+        <tr>
+          <td>07</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>08</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>09</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>2000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="contentCharts">
+    <div class="headerWrap">
+      <div class="chartheader"> <span style="margin-left:4em;">Orders in Production</span> </div>
+    </div>
+    <table class="highchart" data-graph-container-before="1" data-graph-type="area"  data-graph-height="150" data-graph-legend-disabled="0" style="display:none"  data-graph-color-1="#f07c55">
+      <thead>
+        <tr>
+          <th>Days</th>
+          <th>Reports</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>6000</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>13000</td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td>12000</td>
+        </tr>
+        <tr>
+          <td>07</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>08</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>09</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>2000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+  <div class="contentCharts">
+    <div class="headerWrap">
+      <div class="chartheader"> <span style="margin-left:4em;">Orders Under Review </span> </div>
+    </div>
+    <table class="highchart" data-graph-container-before="1" data-graph-type="area"  data-graph-height="150" data-graph-legend-disabled="0" style="display:none"  data-graph-color-1="#a1c466">
+      <thead>
+        <tr>
+          <th>Days</th>
+          <th>Reports</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>6000</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>13000</td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td>12000</td>
+        </tr>
+        <tr>
+          <td>07</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>08</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>09</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>2000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+  <div class="contentCharts">
+    <div class="headerWrap">
+      <div class="chartheader"> <span style="margin-left:4em;">Orders Declained</span> </div>
+    </div>
+    <table class="highchart" data-graph-container-before="1" data-graph-type="area"  data-graph-height="150" data-graph-legend-disabled="0" style="display:none" data-graph-color-1="#8abac8">
+      <thead>
+        <tr>
+          <th>Days</th>
+          <th>Reports</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>6000</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>13000</td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td>12000</td>
+        </tr>
+        <tr>
+          <td>07</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>08</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>09</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>2000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+  <div class="contentCharts">
+    <div class="headerWrap">
+      <div class="chartheader"> <span style="margin-left:4em;">Cancelled Orders </span> </div>
+    </div>
+    <table class="highchart" data-graph-container-before="1" data-graph-type="area"  data-graph-height="150" data-graph-legend-disabled="0" style="display:none" data-graph-color-1="#e5c000">
+      <thead>
+        <tr>
+          <th>Days</th>
+          <th>Reports</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>6000</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>13000</td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td>12000</td>
+        </tr>
+        <tr>
+          <td>07</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>08</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>09</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>2000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+  <div class="contentCharts">
+    <div class="headerWrap">
+      <div class="chartheader"> <span style="margin-left:4em;">Orders Invoiced </span> </div>
+    </div>
+    <table class="highchart" data-graph-container-before="1" data-graph-type="area"  data-graph-height="150" data-graph-legend-disabled="0" style="display:none">
+      <thead>
+        <tr>
+          <th>Days</th>
+          <th>Reports</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>6000</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>13000</td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td>12000</td>
+        </tr>
+        <tr>
+          <td>07</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>08</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>09</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>2000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

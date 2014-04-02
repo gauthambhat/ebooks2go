@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media (max-width:1280px){
+	.navIconsSml{
+		display:block;	
+	}
+	.bottomLeft{
+		display:none;	
+	}
+	
+	.contentCharts{
+	width:97% !important;
+}
+	
+}
+
+@media (max-width:680px){
+	#logo{
+		width:110px !important;
+		height:auto !important;	
+	}
+	.header{
+		height:50px !important;	
+	}
+	.header ul li{
+		width:30px !important;
+		height:30px !important;
+		margin-right:5px !important;
+		overflow:hidden;
+		
+	}
+
+	.avtarStatus, .avtarStatus .adminSection{
+		background-image:url(icons/avtar.png) !important;
+		background-position:left top;
+		display:block !important;	
+	}
+	.breadCrumps, .header .alert, .header ul li span, #adminText, .navigation .navIconsSml , .content, .navigation #header, .bottomLeft{
+		display:none;	
+	}
+	.navigation{
+		margin-top:60px !important;	
+		width:100% !important;
+	}
+	.iconsRight{
+		width:100% !important;
+	}
+	
+	.maincontent {
+	position:static;
+}
+
+.contentCharts{
+	display:block;
+	width:97% !important;
+}
+}
+

@@ -1,0 +1,30 @@
+data set:
+----------
+what is dataset
+fetures of dataset class
+what is command class
+what is data adapter class
+what is fill method
+what is update method
+what is command builder class
+data adapter working process
+how to access the data from datareader
+how to access the data from dataset
+whatis dataset
+what is datatable
+what is datarow
+
+
+data gridview:
+---------------
+
+what is gridview class
+what is data source property
+what is the speciality of data gridview
+what is sql connection class
+what is sql command class
+what is data adapter class
+what is dataset class
+what is command builder class
+what is fill method
+what is update method

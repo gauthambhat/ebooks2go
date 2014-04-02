@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+.contentCharts{
+	text-align:center;
+	display:inline-block;
+	width:49% !important;
+	min-width: 100px !important;
+	margin-left:.5em; 
+	margin-top:.5em; 
+	border: thin solid #a9a9a9;
+}
+.contentCharts .headerWrap{
+	width:auto;
+	text-align:left;
+	padding:left:1.3em;	
+	border-bottom:	thin solid #a9a9a9;
+	background-image:url(../images/breadBg.jpg);
+	background-repeat:repeat;
+}
+
+.contentCharts .chartheader{
+	
+	height:2em;
+	line-height:2em;
+	background-image:url(icons/graph.png);
+	background-repeat:no-repeat;
+	background-position:1.5em 50%;
+	color:#666;
+	
+}

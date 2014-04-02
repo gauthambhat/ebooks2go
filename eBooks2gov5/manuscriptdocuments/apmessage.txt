@@ -1,0 +1,25 @@
+USE [ebooks2go09102013]
+GO
+
+/****** Object:  Table [dbo].[apmessages]    Script Date: 02/04/2014 11:10:31 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[apmessages](
+	[apmsgid] [int] IDENTITY(1,1) NOT NULL,
+	[apmsg] [varchar](250) NOT NULL,
+	[css] [varchar](25) NOT NULL
+) ON [User]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+

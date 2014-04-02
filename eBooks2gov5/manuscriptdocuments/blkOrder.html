@@ -1,0 +1,171 @@
+<div id="center-column">
+<div class="top-bar">
+       <h1>Sales Order Creation</h1>
+   </div>
+   <div class="select-bar">
+   </div>
+<div class="table">
+				<img src="img/bg-th-left.gif" width="8" height="7" alt="" class="left" />
+				<img src="img/bg-th-right.gif" width="7" height="7" alt="" class="right" />
+				
+		   <table class="listing form" cellpadding="0" cellspacing="0">
+			<tr>
+			  <th class="full" colspan="4" >Add New Sales Order</th>
+			</tr>
+		   <form enctype="multipart/form-data" action="sales.php?op=add" name="add" method="post" onsubmit="return validate_form ( );" >
+			<tr>
+			  <th class="full" colspan="4" >General Information</th>
+			</tr>
+			<tr>
+			      <td><label> Date </label></td>
+			      <td><input type="text" name="date" value ="06/25/2013"/>
+				 <script language="JavaScript">
+				  new tcal ({
+					  
+					  "formname": "add",
+					  
+					  "controlname": "date"
+				  });
+			  
+				  </script>
+			      </td>
+			      <td><label> PO Number </label></td>
+			      <td><input type="text" name="po_number" id="po_number" /></td>
+			</tr>
+			<tr>
+			     <td><label> PO Satus </label></td>
+			     <td colspan="1" ><input type="radio" name="po_status" value="in-process" checked = "checked"/> In-Process<input type="radio" name="po_status" value="awarded" /> Awarded</td>
+			     <td colspan="2"></td>
+			</tr>
+	
+	               <tr><th class="full" colspan="4" >Client Information</th></tr>
+				<tr>
+				  <td><label> Client Name </label></td>
+				  <td><select name="clientid" id="clientid"><option value=""> Select a client</option><option value="77">Abbey Press </option><option value="141">Advance Publishing Inc</option><option value="85">Afshar Publishing</option><option value="72">Aisha Subhani</option><option value="61">Aksorn Chareontat Co,Ltd.</option><option value="98">Altair Maia</option><option value="46">Amarin Printing & Publishing</option><option value="146">American Society for Clinical Pathology</option><option value="83">Armida publications</option><option value="119">Aslan Publishing</option><option value="131">Ave Maria Press</option><option value="84">Aveling</option><option value="102">Baby Everywhere/Florence Weiner</option><option value="42">Baker Publishing Group</option><option value="110">Bellwether Media</option><option value="112">BenBella Books</option><option value="147">Big Guy Books</option><option value="95">Bill Hunter</option><option value="137">Bittersweet Publishing</option><option value="71">Blair Publishing </option><option value="167">Brian Zima</option><option value="43">Bridge Publications Inc</option><option value="126">Bright Mountain Books</option><option value="90">Bryan O'Leary </option><option value="151">Bryan O'Leary</option><option value="34">C&E Publishing Inc.</option><option value="33">Cantonment Primary School</option><option value="158">Cardinal Publishing Group </option><option value="80">Carlos Macias </option><option value="75">CBruce Johnson</option><option value="39">Cengage, SG</option><option value="124">Central Conference of American Rabbis</option><option value="50">Charles C Thomas Publisher</option><option value="165">Cherry Lake Publishing</option><option value="113">Chick Weiner</option><option value="62">Christ Church Kindergarten</option><option value="134">Colleen Sen</option><option value="135">Colleen Sen</option><option value="68">Convivium Press</option><option value="48">Cookbook Resources</option><option value="142">Cozy Killers </option><option value="154">Danny Quintana </option><option value="145">Darwin Press</option><option value="78">Debra Winegarten</option><option value="86">DeVaughn Lilly</option><option value="132">Dove Creek Press </option><option value="105">Dr. Antoine Moss</option><option value="25">Dr. Praveen Gupta</option><option value="101">Dr.Ted & Joyce Eisenberg</option><option value="38">eBooks2Go</option><option value="99">ECTACO, Inc.</option><option value="70">Element LLC</option><option value="152">Ellyn Satter Associates</option><option value="157">Essex Publishing Group</option><option value="136">Evanow </option><option value="76">Gale Rigobert</option><option value="26">Gantec Publishing Solutions</option><option value="153">GBOD | The United Methodist Church</option><option value="41">Glenn Johnson</option><option value="160">Grace Evangelical Society</option><option value="114">Great Texas Line / Savory House Press</option><option value="140">Greg Yano</option><option value="29">Grey</option><option value="54">Hank Shrier</option><option value="118">Harold Levine</option><option value="106">Howard Shapiro</option><option value="117">Howard Shapiro</option><option value="18">HR Pundits</option><option value="115">Hugh Motlagh</option><option value="44">IAP ? Information Age Publishing Inc</option><option value="159">Illumination Publishers International </option><option value="155">Independent Publishers Group</option><option value="163">IPG</option><option value="59">Italo Subbaroa & Ed Hsu</option><option value="93">IVE Press </option><option value="168">J R Media Group LLC</option><option value="92">Janice Mullings </option><option value="150">JJ Graphics</option><option value="120">Judy Young</option><option value="156">Ken Spillman</option><option value="138">Koinonia House</option><option value="127">Lee Valley  Tools</option><option value="56">Marcia Noren</option><option value="36">MARTA</option><option value="107">Martin Butler</option><option value="19">MC Online</option><option value="51">McClanahan Publishing House Inc.</option><option value="32">Media Corp</option><option value="143">Mira</option><option value="94">Monique Moore</option><option value="57">Mosaica Press</option><option value="149">National Catholic Reporter</option><option value="88">National Library Board, SG</option><option value="148">New Rivers Press</option><option value="65">Oswal Printers and Publishers Pvt. Ltd.</option><option value="35">PA. Vijay</option><option value="111">PCS Publications</option><option value="55">Pear Jam Books</option><option value="89">Pearson SG</option><option value="9">Pearson, Boston</option><option value="11">Pearson, Canada</option><option value="15">Pearson, Glenview</option><option value="21">Pearson, UK</option><option value="12">Pearson, USR</option><option value="74">Peter Li Education Group</option><option value="17">Plan Parithat</option><option value="130">Practical Christian Foundation</option><option value="128">Programmers Investment Corporation</option><option value="162">Provisio Publishing</option><option value="139">Pustaka Nasional</option><option value="30">Rajiv Khanna</option><option value="66">Randall Brewer</option><option value="125">Ranjini Rao</option><option value="81">Raythe Rayne</option><option value="166">Richard Krevolin</option><option value="16">Riverside Publishing</option><option value="116">Robert Haiyne</option><option value="103">Sally Brockett</option><option value="121">Sandra Beckwith</option><option value="79">Scholastic Inc.</option><option value="161">Scott Freund</option><option value="53">Scroll Media Pte. Ltd</option><option value="109">Sea Lion Books</option><option value="23">Sheridan Books</option><option value="144">Sheridan, PA</option><option value="129">Sherman Turner</option><option value="63">Singapore Asian Publications</option><option value="58">SMR HR Group</option><option value="164">Sree Charan</option><option value="24">Strathmore</option><option value="40">Sue Langenberg</option><option value="96">Symmetry</option><option value="108">Tahrike Tarsile Qur'an, Inc.</option><option value="67">Tara Balakrishnan</option><option value="37">Teaching Strategies</option><option value="100">Teresa K. Irish</option><option value="52">The Creative Company</option><option value="73">The Zharmae Publishing Press, L.L.C.</option><option value="31">Theresa Anne Severin</option><option value="104">Theresa Kilpatrick</option><option value="47">Thomson Reuters, SG</option><option value="49">Tighe Publishing</option><option value="22">Triumph Education</option><option value="133">Truth Book Publishers</option><option value="122">Uma Girish</option><option value="60">Unite Associates</option><option value="91">United Graphics </option><option value="123">Upper Room</option><option value="87">Vincenzo Guilliano </option><option value="28">WASD</option><option value="45">Windy City Publishers</option><option value="64">Wordstream Publishing</option><option value="27">WSPC</option><option value="20">WW Norton</option><option value="69">Youth Leader's Coach Publications</option><option value="97">Yvonne Dayan</option><option value="82">Zamela Henry </option></select>
+					  <a href="../client.php?addform=yes"><input type="button" value="Add New Client" /></a></td>
+				  <td><label>Contact Person </label></td>
+				  <td><input type="text" name="client_contact" id="client_contact"/></td>
+				</tr>
+				<tr>
+				  <td><label> Client Address </label></td>
+				  <td><textarea name="address" id="address"></textarea></td>
+				  <td><label> Contact Phone </label></td>
+				  <td><input type="text" name="contact_phone" id="contact_phone" /></td>
+				</tr>
+				<tr>
+				   <td></td>
+				  <td></td>
+				  <td><label> Contact Email Address </label></td>
+				  <td><input type="text" name="contact_email" id="contact_email" /></td>
+				</tr>
+      
+
+		      <tr><th class="full" colspan="4" >Project Information</th></tr>
+				<tr>
+				  <td><label> Project Name </label></td>
+				  <td colspan="3"><input type="text" name="project_name" id="project_name" class="p"/></td>
+				</tr>
+				<tr>
+				  <td><label> Start Date </label></td>
+				  <td><input type="text" name="project_start_date" id ="project_start_date" />
+				    <script language="JavaScript">
+				     new tcal ({
+					     
+					     "formname": "add",
+					     
+					     "controlname": "project_start_date"
+				     });
+				   </script></td>
+			      
+				    <td><label> End Date </label></td>
+				    <td><input type="text" name="project_end_date" id ="project_end_date" />
+				      <script language="JavaScript">
+					  new tcal ({
+						
+						"formname": "add",
+						
+						"controlname": "project_end_date"
+					});			  
+				      </script>
+				    </td>
+				</tr>
+			      <tr>
+				<td><label> Service Type </label></td>
+				<td colspan="3"><select name="service_typeid" id="service_typeid"><option value=""> Select a Service</option><option value="2">X - XML-related</option><option value="3">S - Sample of any Project Type</option><option value="4">F - Full Service - Editorial, Art or Photo, Design, Composition, Pre-Press</option><option value="5">B - Art or Photo, Design, Composition, Pre-Press</option><option value="6">C - Composition and/or Pre-prepress</option><option value="7">P - Prepress only</option><option value="8">FD - File Download only</option><option value="9">A - e-pub Conversions</option><option value="10">M - Monthly In-house Not Chargable</option><option value="11">O - Optimization Only</option><option value="12">Scn - Scanning Type Project</option><option value="13">Othr - This is for any other type of Service</option><option value="14">SS - Software Services</option></select></td>
+				</tr>
+			      <tr>
+				<td><label> Product Type </label></td>
+				<td colspan="3" ><select name="product_typeid" id="product_typeid"><option value=""> Select a Product</option><option value="1">Higher Ed</option><option value="2">Curriculum</option><option value="3">Catalog</option><option value="4">Journal</option><option value="5">Tech Service</option><option value="6">Others</option></select></td>
+			      </tr>
+			      <tr>
+				<td><label> Payment Terms </label></td>
+				<td colspan="3" ><input type="text" name="payment_terms id="payment_terms" /></td>
+			      </tr>
+			      <tr>
+				<td><label> Delivery Method </label></td>
+				<td colspan="3" ><input type="text" name="delivery_method" id="delivery_method" /></td>
+			      </tr>
+			      <tr>
+				<td><label> Project Description-Log Notes</label></td>
+				<td colspan="3" ><textarea name="project_desc" id="project_desc" class="up" ></textarea></td>
+			</tr>
+				  
+				  
+<tr><td colspan="4" style="padding-left:0px;padding-right:0px;">
+	<table width="100%" class="listing form" cellpadding="0" cellspacing="0" id="dataTable" >
+	
+		<tr>
+		    <th></th>
+			<th>SNo.</th>
+			<th>Material Description</th>
+			<th>Unit Price</th><th>Quantity</th>
+		</tr>
+		<tr>
+			<td><INPUT type="checkbox" name="chk"/></td>
+			<td>1</td>
+			<td><input type="text" name="material[]" width="300px" id="mat_desc" /></td>
+			<td><input type="text" name="price[]" id="price"/></td>
+			<td><input type="text" name="quantity[]" id="quant"/></td>
+		</tr>
+		<tr>
+            <td><INPUT type="checkbox" name="chk"/></td>
+			<td>2</td>
+			<td><input type="text" name="material[]" width="300 px" /></td>
+			<td><input type="text" name="price[]" /></td>
+			<td><input type="text" name="quantity[]" /></td>
+		</tr>
+		<tr>
+			<td><INPUT type="checkbox" name="chk"/></td>
+			<td>3</td>
+			<td><input type="text" name="material[]" width="300px" /></td>
+			<td><input type="text" name="price[]" /></td>
+			<td><input type="text" name="quantity[]" /></td>
+		</tr>
+		<tr>
+			<td><INPUT type="checkbox" name="chk"/></td>
+			<td>4</td>
+			<td><input type="text" name="material[]" width="300px" /></td>
+			<td><input type="text" name="price[]" /></td>
+			<td><input type="text" name="quantity[]" /></td>
+		</tr>
+	</table>
+				<input type="button" value="Add Row" onclick="addRow('dataTable')" />
+			    <input type="button" value="Delete Row" onclick="deleteRow('dataTable')" />		
+</td></tr>
+		<tr>
+			<th colspan="4" align="right" >Currency
+			    <select name="currency" >	
+				    <option value="USD" >USD</option><option value="SGD" >SGD</option>	
+				    <option value="GBP" >GBP</option>
+				</select>Total Price <input type="text" name="total_price" class="tot_price" />
+			</th>
+		</tr>
+		<tr>
+				<td colspan="4" >
+					<input type="submit" class="button" name ="add" value="Add" />
+					<input type=button value="Back" onClick="history.go(-1)">
+				</td>
+		</tr>
+		  
+		  </table>
+		  </form></div></div>

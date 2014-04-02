@@ -1,0 +1,215 @@
+<div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
+               <div style="visibility:hidden;display:block;" id="ctl00_ContentPlaceHolder1_UpdateProgress1" role="status" aria-hidden="true">
+	
+                        <div id="ajaxloader">
+                            <img src="../images/loading.gif">
+                            <br>
+                        </div>
+                    
+</div>
+                <table width="100%">
+                        <tbody><tr>
+                        <td>
+                        <strong>
+                        <a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$lnkProjectMaster&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" class="link" id="ctl00_ContentPlaceHolder1_lnkProjectMaster">Project Master&gt;&gt;</a>
+                        </strong>
+                        </td>
+                        </tr>
+                </tbody></table>
+                <table width="100%">
+                      <tbody><tr>
+                         <td>
+                          <span id="ctl00_ContentPlaceHolder1_lblMsg"></span>
+                         </td>
+                       </tr>
+                     </tbody></table>
+                  <div style="width:95%;" id="ctl00_ContentPlaceHolder1_Panel2">
+	<fieldset>
+		<legend>
+			Service details
+		</legend>
+                    <table width="100%">
+                      <tbody><tr>
+                        <td>
+                         Category:
+                          <select id="ctl00_ContentPlaceHolder1_ddlCategory" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlCategory\',\'\')', 0)" name="ctl00$ContentPlaceHolder1$ddlCategory">
+			<option value="0">Select Category</option>
+			<option value="2" selected="selected">eBook</option>
+			<option value="4">Social Media</option>
+			<option value="1">eBook Apps - iPad</option>
+			<option value="9">Enhanced eBook - iPad</option>
+			<option value="10">eBook Apps - Android</option>
+
+		</select>
+                           <span style="color:Red;visibility:hidden;" id="ctl00_ContentPlaceHolder1_Requiredcategory">*</span>
+                           </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        Service:
+                          <select id="ctl00_ContentPlaceHolder1_ddlService" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlService\',\'\')', 0)" name="ctl00$ContentPlaceHolder1$ddlService">
+			<option value="0">Select Services</option>
+			<option value="3,300.00,S" selected="selected">Cover Design - 1 Unit - $ 300.00</option>
+			<option value="1,199.00,S">ePUB - 1 Unit - $ 199.00</option>
+			<option value="2,199.00,S">Mobi - 1 Unit - $ 199.00</option>
+
+		</select>
+                          <span style="color:Red;visibility:hidden;" id="ctl00_ContentPlaceHolder1_RequiredService">*</span>
+                            <span id="ctl00_ContentPlaceHolder1_lblServiceQty">Qty:</span>
+                            <input type="text" style="width:25px;" id="ctl00_ContentPlaceHolder1_txtServiceQty" name="ctl00$ContentPlaceHolder1$txtServiceQty">
+                           <span id="ctl00_ContentPlaceHolder1_lblDis">Dis%</span>
+                            <input type="text" style="width:25px;" id="ctl00_ContentPlaceHolder1_txtDis" name="ctl00$ContentPlaceHolder1$txtDis">
+                             <span style="color:Red;visibility:hidden;" id="ctl00_ContentPlaceHolder1_RequiredServiceQty">*</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                           Customize:
+                         <select onchange="Enablevalidators();" id="ctl00_ContentPlaceHolder1_ddlCust" name="ctl00$ContentPlaceHolder1$ddlCust">
+			<option value="0">Select Customisation</option>
+			<option value="9,0.49">Additional pages - 1 Unit - $ 0.49</option>
+			<option value="10,4.00">Additional Illustrations - 1 Unit - $ 4.00</option>
+			<option value="11,0.50">Additional line item linking - 1 Unit - $ 0.50</option>
+			<option value="12,9.99">ISBN for ePub/Mobi format - 1 Unit - $ 9.99</option>
+
+		</select>
+                           <span id="ctl00_ContentPlaceHolder1_lblCustQty">Qty:</span>
+                            <input type="text" style="width:25px;" id="ctl00_ContentPlaceHolder1_txtCustQty" name="ctl00$ContentPlaceHolder1$txtCustQty">
+                            <span style="color:Red;visibility:hidden;" id="ctl00_ContentPlaceHolder1_RequiredCustQty">*</span>
+                             <span id="ctl00_ContentPlaceHolder1_lblCustDis">Dis%</span>
+                            <input type="text" style="width:25px;" id="ctl00_ContentPlaceHolder1_txtCustDis" name="ctl00$ContentPlaceHolder1$txtCustDis">
+                            
+                            </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Upsell:
+                         <select onchange="Enablevalidators();" id="ctl00_ContentPlaceHolder1_ddlUpsell" name="ctl00$ContentPlaceHolder1$ddlUpsell">
+			<option value="0">Select Upsell</option>
+
+		</select>
+                           <span id="ctl00_ContentPlaceHolder1_lblUpQty">Qty:</span>
+                            <input type="text" style="width:25px;" id="ctl00_ContentPlaceHolder1_txtUpQty" name="ctl00$ContentPlaceHolder1$txtUpQty">
+                           <span style="color:Red;visibility:hidden;" id="ctl00_ContentPlaceHolder1_RequiredUpQty">*</span>
+                            <span id="ctl00_ContentPlaceHolder1_lblUpDis">Dis%</span>
+                            <input type="text" style="width:25px;" id="ctl00_ContentPlaceHolder1_txtUpDis" name="ctl00$ContentPlaceHolder1$txtUpDis">
+                             
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        No of Illustration
+                        <input type="text" style="width:70px;" tabindex="7" id="ctl00_ContentPlaceHolder1_txtIllustrationCount" maxlength="4" name="ctl00$ContentPlaceHolder1$txtIllustrationCount">
+                      
+                        <span style="color:Red;display:none;" id="ctl00_ContentPlaceHolder1_RegularExpressionValidator1">*</span>
+                        
+                         </td>
+                      </tr>
+                      <tr>
+                        <td>
+                         Book Language:
+                         <select id="ctl00_ContentPlaceHolder1_ddlBookLanguage" name="ctl00$ContentPlaceHolder1$ddlBookLanguage">
+			<option value="1" selected="selected">English</option>
+			<option value="2">Spanish</option>
+			<option value="3">French</option>
+			<option value="4">German</option>
+			<option value="5">Arabic</option>
+			<option value="6">Hebrew</option>
+			<option value="7">Other</option>
+
+		</select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                         Item Name:
+                            <input type="text" style="width:40%;" id="ctl00_ContentPlaceHolder1_txtMatname" name="ctl00$ContentPlaceHolder1$txtMatname">
+                            <input type="submit" id="ctl00_ContentPlaceHolder1_btnAdd" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnAdd&quot;, &quot;&quot;, true, &quot;Add&quot;, &quot;&quot;, false, false))" value="Add Item" name="ctl00$ContentPlaceHolder1$btnAdd">
+                        </td>
+                      </tr>
+                   </tbody></table>
+                  
+	</fieldset>
+</div>
+                  <div style="width:95%;" id="ctl00_ContentPlaceHolder1_Panel3">
+	<fieldset>
+		<legend>
+			OrderItems
+		</legend>
+                  <table width="100%">
+                  <tbody><tr>
+                  <td><input type="submit" id="ctl00_ContentPlaceHolder1_btnPlaceOrder" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnPlaceOrder&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" value="Place Order" name="ctl00$ContentPlaceHolder1$btnPlaceOrder"></td>
+                  </tr>
+                      <tr>
+                      <td>
+                          
+                          
+                      <div>
+			<table cellspacing="0" border="1" style="border-collapse:collapse;" id="ctl00_ContentPlaceHolder1_gvScart" rules="all">
+				<tbody><tr>
+					<th scope="col">S#</th><th scope="col">ProductName</th><th scope="col">Price</th><th scope="col">Quantity</th><th scope="col">Discount%</th><th scope="col">SubTotal</th><th scope="col">Langauge</th><th scope="col">Item Name</th><th scope="col">NoofIllustrations</th><th scope="col">Action</th><th scope="col">Delete</th>
+				</tr><tr>
+					<td style="width:30px;">
+                                    1
+                                </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl02_gdlblProductName">Cover Design</span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl02_gdlblPrice">300.00</span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl02_gdlblQty">10</span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl02_gdlblDis">10.00</span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl02_gdlblTotal">2700.00</span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl02_gdlblLanguage">English</span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl02_gdlblMatname"></span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl02_gdlblIllustrations">0</span>
+                                      </td><td>
+	                            <a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$gvScart$ctl02$edit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="ctl00_ContentPlaceHolder1_gvScart_ctl02_edit">Edit</a>
+	                            </td><td>
+                                            <input type="image" style="border-width:0px;" onclick="return confirm('Do you want to delete the Item?');" alt="Delete" src="../images/delete_icon.png" title="Delete" id="ctl00_ContentPlaceHolder1_gvScart_ctl02_lnkBtnDelete" name="ctl00$ContentPlaceHolder1$gvScart$ctl02$lnkBtnDelete">
+                                      </td>
+				</tr><tr>
+					<td style="width:30px;">
+                                    2
+                                </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl03_gdlblProductName">Additional pages</span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl03_gdlblPrice">0.49</span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl03_gdlblQty">17</span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl03_gdlblDis">1.00</span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl03_gdlblTotal">8.33</span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl03_gdlblLanguage">English</span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl03_gdlblMatname"></span>
+                                      </td><td>
+                                          <span id="ctl00_ContentPlaceHolder1_gvScart_ctl03_gdlblIllustrations">0</span>
+                                      </td><td>
+	                            <a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$gvScart$ctl03$edit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="ctl00_ContentPlaceHolder1_gvScart_ctl03_edit">Edit</a>
+	                            </td><td>
+                                            <input type="image" style="border-width:0px;" onclick="return confirm('Do you want to delete the Item?');" alt="Delete" src="../images/delete_icon.png" title="Delete" id="ctl00_ContentPlaceHolder1_gvScart_ctl03_lnkBtnDelete" name="ctl00$ContentPlaceHolder1$gvScart$ctl03$lnkBtnDelete">
+                                      </td>
+				</tr>
+			</tbody></table>
+		</div>
+                      </td>
+                      </tr>
+                      <tr>
+                          <td>
+                          <div>
+
+		</div>
+                          </td>
+                      </tr>
+                    </tbody></table>
+                  
+	</fieldset>
+</div>
+                  </div>

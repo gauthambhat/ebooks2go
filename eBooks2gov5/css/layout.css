@@ -1,0 +1,48 @@
+body{ margin-top:0px; background-color:#FFFFFF;}
+.wrapper{ width:98%; margin:auto;}
+
+/************Header Start************/
+.header{ width:100%; float:left; height:90px;}
+.logo{ float:left; width:50%;}
+.top_navigation{ float:right; width:47%; margin:20px 0px 0px 0px;}
+.top_navigation ul{ float:right;}
+.top_navigation ul li{ display:inline; margin:0px 15px 0px 15px; font-family: "Droid Sans"; font-size:14px; color:#7b7b7b;}
+.actives{ color:#000000;}
+.top_navigation ul li a{color:#3e79b3; text-decoration:none;}
+.top_navigation ul li a:hover{color:#000000;}
+/************Header End************/
+
+
+.container_bg{ width:100%; float:left; background-color:#f8f8f8;border-radius: 8px 8px 8px 8px;-moz-border-radius: 8px 8px 8px 8px;	-webkit-border-radius: 8px 8px 8px 8px; border:solid 1px #e9e9e9;}
+
+/************Menu Start************/
+a{ outline:none; text-decoration:none;}
+li{ list-style-type:none;}
+
+.navigation{ width:98%; margin:1%;  height:39px; background-image:url(../images/menu_bg.jpg); background-repeat:repeat;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;}
+	
+.menu{ float:left; height:30px; font-family:Arial, Helvetica, sans-serif; margin:0px;}
+.menu > li{ float:left; margin-left:30px; padding-right:30px; position:relative; display:inline-block; height:38px; background-image:url(../images/menu_devider.png); background-repeat:no-repeat; background-position:right;}
+.menu > li a{ display:block; float:left; height:30px; line-height:30px; text-align:center; font-size:12px; font-weight:bold; color:#fff; padding:0 30px; margin:0 2px; margin-top:5px;  }
+.menu > li span{ position:relative; top:5px; color:#979494;}
+.menu > li a:hover,.menu > li a.sel{ background-image:url(../images/menu_bg.png); color:#000; background-color:#FFFFFF; border-radius:5px;  line-height:30px;}
+.menu > li ul {position:absolute; display:none; top:36px; padding:10px; border:1px solid #ddd; background-color:#c9c9c9; box-shadow:0 0 3px #eee; border-radius:5px; white-space:nowrap; z-index:10; width:auto; background-image:url(images/dropdown_bg.jpg);}
+.menu > li:hover ul {left:0; display:block;}
+.menu > li ul li {float:none;}
+.menu > li ul li a {float:none; text-align:left;}
+.ebooks2go_dropdown{ float:right; margin-top:8px; margin-left:5px;}
+/************Menu End************/
+
+/************Body Start************/
+.ebooks2go_main_content{  width:98%; margin: 0% 1% 1% 1%; float:left;}
+.left-side_menu{ float:left; width:15%;}
+.right-side_content{ width:80%; float:right;}
+
+/************Body End************/
+
+/************Footer Start************/
+.footer{ width:98%; float:left;font-family: "Droid Sans";font-size:13px;color:#2E2E2E;line-height:45px;}
+/************Footer End************/

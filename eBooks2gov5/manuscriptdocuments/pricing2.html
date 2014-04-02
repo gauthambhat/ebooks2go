@@ -1,0 +1,1426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7, IE=8, IE=9, chrome=1" />
+<title>eBook Pricing | eBook Packages</title>
+<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type='text/javascript' src="js/jquery-css-transform.js"></script>
+<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="js/jquery.ui.accordion.js"></script>
+<script type="text/javascript"> 
+  var setChecked = function(oThis) {
+    setTimeout(function(){
+      $(oThis).attr("checked","checked");
+     },10);
+  };
+  $(function() { 
+    $("#accordion").accordion({ 
+      collapsible: false ,
+      change: function(event, ui) { 
+        setChecked ($("input",ui.newHeader)); }
+    });  
+    $("#accordion h4 input").css("margin-left","50px");  
+    $("#accordion h4 input").eq(0).attr("checked","checked");
+  }); 
+  
+</script>
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+// Short-form of `document.ready`
+$(function(){
+    $("#div1").show();
+  
+});
+});//]]>  
+
+</script>
+<script type='text/javascript'> 
+$(document).ready(function(){
+  $("#preview").click(function(){
+    $(".eb2g_StandardFormat_contents").slideToggle("slow");
+  });
+});
+</script>
+<script type="text/javascript"> 
+
+$(function() {
+    $( document ).tooltip();
+  });
+
+function showMe (it, hide1, hide2, hide3, box) { 
+document.getElementById(it).style.display = "block"; 
+document.getElementById(hide1).style.display = "none"; 
+document.getElementById(hide2).style.display = "none"; 
+} 
+function showMe2 (it) { 
+var vis = document.getElementById(it).style.display 
+if (vis == "block") { document.getElementById(it).style.display = "none"; } 
+else { document.getElementById(it).style.display = "block"; } 
+} 
+</script>
+<script>
+//Text box for pages//
+function sum() {	
+var $b = $('input[type=checkbox]');
+            var ched=($b.filter(' :checked').length);
+		    var txtFirstNumberValue = document.getElementById('txt1').value;
+			var result = parseInt(txtFirstNumberValue) - parseInt(200);
+			var pages=ched*result;
+            if (!isNaN(result)) {
+			var totala=pages*(0.5);
+ document.getElementById('txt2').value = pages;
+document.getElementById('txt4').value = totala;
+var total=0;
+         $('#StandardeBookFormat :checked').each(function() {
+		   total+=parseFloat($(this).val());
+		   if(ched==1)
+		   {
+		   stotal=total+totala;
+				grand=stotal;
+		   }
+		   if(ched==2)
+			   {
+			    stotal=total+totala;
+				satotal=stotal*(0.1);
+				grand=stotal-satotal;
+			   }
+			  else if(ched==3)
+			   {
+			    stotal=total+totala;
+				satotal=stotal*(0.2);
+			    grand=stotal-satotal;
+			   }
+         });
+			$('#totalamount').val(grand);
+			document.getElementById('nestd').value = grand;	
+						          }
+               }
+//text boxes for images//
+	function Images() {
+	var $b = $('input[type=checkbox]');
+               var ched=($b.filter(':checked').length);
+			   var txtFirstNumberValue = document.getElementById('ima1').value;
+			var result = parseInt(txtFirstNumberValue) - parseInt(10);
+			var images=ched*result;
+			 if (!isNaN(result)) {
+			 var totali=images*(3)
+                var totalcost =result*(3);
+			document.getElementById('ima2').value = images;
+			document.getElementById('ima4').value = totali;
+						 var total=0;
+         $('#StandardeBookFormat :checked').each(function() {
+		   total+=parseFloat($(this).val());
+		 
+		   imagestotal=totali+grand;
+         });
+		    
+			$('#totalamount').val(imagestotal);
+			 				        }
+            
+        }
+		//text boxes for FootNotes//
+		function  FootNotes() {
+		var $b = $('input[type=checkbox]');
+               var ched=($b.filter(':checked').length);
+		        var txtFirstNumberValue = document.getElementById('ftn1').value;
+	 var result = parseInt(txtFirstNumberValue) - parseInt(10);
+			var notes=ched*result;
+			  if (!isNaN(result)) {
+			  var total=notes*(0.25)
+			  var totalcost =result*(0.25);
+				 document.getElementById('ftn2').value = notes;
+				 document.getElementById('ftn4').value = total;
+				 foottotal=imagestotal+total;
+				 $('#totalamount').val(foottotal);
+				        }
+            
+        }
+		//text boxes for Hyperlinks//
+		function  Hyperlinks() {
+		var $b = $('input[type=checkbox]');
+               var ched=($b.filter(':checked').length);
+		        var txtFirstNumberValue = document.getElementById('hyp1').value;
+				var result = parseInt(txtFirstNumberValue) - parseInt(10);
+			var links=ched*result;
+			  if (!isNaN(result)) {
+			    var total=links*(0.25)
+                var totalcost =result*(0.25);
+				 document.getElementById('hyp2').value = links;
+				 document.getElementById('hyp4').value = total;
+				 grandtotal=foottotal+total;
+				 $('#totalamount').val(grandtotal);
+										}
+           }
+		   
+		function updateTextArea2() {
+         var total=0;
+        var $b = $('input[type=checkbox]');
+               var ched=($b.filter('#nestedtoc :checked').length);
+			   if(ched==5)
+			   {
+			   totaltoc=grand/2;
+			   currency=parseFloat(Math.round(totalcost * 100) / 100).toFixed(2);
+			   $('#nestd').val(totaltoc);
+			   }
+			   if(ched==4)
+			   {
+			   document.getElementById('nestd').value = grand;		
+			   totalcost=grand*(0.3);
+			    totaltoc=grand+totalcost;
+			    $('#nestd').val(totaltoc);
+			   }
+	         }
+     $(function() {
+       $('#nestedtoc input').click(updateTextArea);
+       updateTextArea2();
+     });
+     function updateTextArea() {
+         var total=0;
+		  $('#StandardeBookFormat :checked').each(function() {
+		   total+=parseFloat($(this).val());
+		 var $b = $('input[type=checkbox]');
+               var ched=($b.filter('#StandardeBookFormat :checked').length);
+			    if(ched==2)
+			   {satotal=249*(0.1);
+				grand=249-satotal;
+			   }
+			   if(ched==3)
+			   {satotal=447*(0.2);
+			    grand=477-satotal;
+			   }
+			          });
+	 $('#totalamount').val(total);
+	 $('#totalamount').val(grand);
+	   var grand=grandtotal+total+totaltoc-(298);
+		
+		 $('#totalamount').val(grand);
+      }
+     $(function() {
+       $('#StandardeBookFormat input').click(updateTextArea);
+       updateTextArea();
+     });
+</script>
+<style type="text/css">
+.divstyle {
+	display: none;
+	height:auto;
+	width:auto;
+}
+</style>
+<link type='text/css' href='css/pricingpage.css' rel='stylesheet' media='screen' />
+<style>
+@font-face {
+font-family: "Droid Sans";
+src: url(DroidSans.ttf) format("truetype");
+}
+@font-face {
+font-family: "Trebuchet MS";
+src: url(trebuc.ttf) format("truetype");
+}
+@font-face {
+font-family: "Roboto";
+src: url(Roboto-bold.ttf) format("truetype");
+}
+@font-face {
+font-family: "Oswald";
+src: url(Oswald-Regular.otf) format("truetype");
+}
+</style>
+<style type='text/css'>
+.blueclock {
+	float:left;
+	margin-left:-30px;
+}
+.pendulum-parent {
+	display: none;
+	height: 40px;
+	width: 228px;
+}
+.pendulum-child {
+	left: 150px;
+	position: absolute;
+	top: 0;
+}
+.ebooks_discount {
+	width: 235px;
+	height: 235px;
+	float: none;
+	background-image: url(images/best.png);
+	background-repeat: no-repeat;
+	color: #FFF;
+	/* [disabled]padding: 6px; */
+	/* [disabled]padding-top: 20px; */
+}
+
+#apDiv1 {
+	position: absolute;
+	left: 236px;
+	top: 90px;
+	width: 64px;
+	height: 55px;
+	z-index: 1;
+}
+#apDiv2 {
+	position:absolute;
+	left:5px;
+	top:40px;
+	width:300px;
+	height:100px;
+	z-index:0;
+}
+#apDiv3 {
+	position:absolute;
+	left:300px;
+	top:120px;
+	width:64px;
+	height:55px;
+	z-index:1;
+}
+.ebooks_discount{
+	color:#000;
+	font-size:1.2em;
+	padding:10px;
+	padding-top:5px;
+	
+	
+}
+
+.ebooks_discount ul{
+	margin-left: -10px;
+	font-size: 0.8em;
+	font-weight: normal;
+	margin-right: 10px;
+	list-style-image: url(images/star.png);
+	list-style-position: inside;
+}
+.ebooks_discount ul li{
+	font-family: 'Gloria Hallelujah', cursive;
+	color:#000;
+	text-align:left;	
+}
+</style>
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+</head>
+<body id="grid">
+<div id="wrapper">
+  <div class="eb2g_main_pricing">
+    <div class="eb2g_pricing">
+      <div id="info"> <b id="tab1" class="hiddenTarget"></b> <b id="tab2" class="hiddenTarget"></b><b id="tab3" class="hiddenTarget"></b><b id="tab4" class="hiddenTarget"></b><b id="tab5" class="hiddenTarget"></b>
+        <div class="tabbedPages">
+          <ul class="tabs">
+            <li><a href="#tab1" class="default tab1 tabpages">eBook</a></li>
+            <li><a href="#tab2" class="tab2 tabpages">Enhanced eBook</a></li>
+            <li><a href="#tab3" class="tab3 tabpages">eBook Apps</a></li>
+            <li><a href="#tab4" class="tab4 tabpages">Sales & Distribution</a></li>
+            <li><a href="#tab5" class="tab5 tabpages">Marketing</a></li>
+          </ul>
+          <div id="view1" class="tabcontent default" >
+            <div id="StandardeBookFormat">
+              <div class="eb2g_StandardFormateBook">
+                <div class="eb2g_headerleft">
+                  <div class="eb2g_StandardFormat_title">Standard Format eBook:<br />
+                    <span class="book_style">Free Flow Text Layout</span><br />
+                    <br />
+                    Basic Packages includes </div>
+                  <div class="eb2g_StandardFormat_content">
+                    <table width="250" cellspacing="0">
+                      <tr>
+                        <td><li>Conversion upto 200 pages</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>10 images / Tables </li></td>
+                      </tr>
+                      <tr>
+                        <td><li>10 Foot Notes/End Notes</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>10 Hyperlinks </li></td>
+                      </tr>
+                      <tr>
+                        <td><li>TOC Linking</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>QC Check </li></td>
+                      </tr>
+                      
+                    </table>
+                  </div>
+                  <div class="eb2g_StandardFormat_titleimg"> <img src="images/ebooksformating.png" alt="" /></div>
+                  <div class="eb2g_discountprice">
+                    <div class="blueclock">
+                      <div style="transform: rotate(0deg) scale(1, 1); display: block;" class="pendulum-parent">
+                        <div class="ebooks_discount" align="center">
+                        <b>Offers</b>
+                        <ul>
+                        <li>Select any ' 2 ' products get 10% Discount on base price </li>
+
+<li>Select any ' 3 ' products get 20% Discount on base price</li></ul>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="eb2g_headerright">
+                  <div class="box-heading">Choose product(s) </div>
+                  <div class="box-content">
+                    <div class="eb2g_products">
+                      <div class="eb2g_products_details_eup">
+                        <table>
+                          <tr class="store_name">
+                            <td width="93" rowspan="2" valign="middle"><input type="checkbox" name="epub" id="epub" />
+                            <label for="epub2"><img src="images/epub.png" alt="epub" /></label>                              </td>
+                            <td width="222"><span class="product_details">Works on 90 percent of the devices available in the market. Doesn't work on Amazon devices.</span></td>
+                          </tr>
+                          
+                          <tr>
+                            <td align="center" class="productPrice">$149.00</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="eb2g_products_details_mobi">
+                        <table width="319">
+                          <tr class="store_name">
+                            <td style="padding-top:8px;" width="93" rowspan="2"><input type="checkbox" name="kindle" id="kindle" />
+                            <label for="kindle"><img src="images/kindle.png" width="511" height="511" alt="kindle" /></label>                              </td>
+                            <td width="214"><span class="product_details">Works only with Amazon kindle fire devices.</span></td>
+                          </tr>
+                          <tr>
+                            <td align="center" class="productPrice">$149.00</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="eb2g_products_details_epdf">
+                        <table>
+                          <tr class="store_name">
+                            <td width="93" rowspan="2"><input type="checkbox" name="epdf" id="epdf" />
+                            <label for="epdf"><img src="images/PDF.png" width="512" height="512" alt="epdf" /></label>                              </td>
+                            <td><span class="product_details"> Works on 90 percent of the devices available in the market. Doesn't work on Amazon devices.</span></td>
+                          </tr>
+                          
+                          <tr>
+                            <td align="center" class="productPrice">$149.00</td>
+                          </tr>
+                        </table>
+                      </div>
+                      
+                    </div>
+                    <div class="eb2g_products_cost">
+                      <div class="eb2g_PackageCost">Package Cost <br />
+                        <input type="text" id="totalamount"  />
+                      </div>
+                      <div class="eb2g_addtocart"> <a href="#"><img src="images/addtocart.jpg" alt="" /> </a></div>
+                      <div class="eb2g_viewcart"> <a href="#"><img src="images/viewcart.jpg" alt="" /> </a></div>
+                    </div>
+                    <br/>
+                  
+                    <br class="clear" />;
+                  </div>
+                </div>
+              </div>
+              <div>&nbsp;</div>
+              <hr>
+              <span class="Customizeyourproduct">
+              <h3>Customize your product</h3>
+              </span>
+       <label></label>       <div class="Customize_pricing">
+                <table width="1000" cellspacing="0" class="customize_products">
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th align="center">Total Units</th>
+                    <th>Additional Units</th>
+                    <th>Unit Cost</th>
+                    <th>Additional Cost</th>
+                  </tr>
+                  <tr>
+                    <td width="490"><h4>Total Number of pages in the Book</h4>
+                      <span class="Customize_totalnumber">Upto 200 pages are included in the base price.<br />
+Additional pages will be billed at.
+                      50 cents per page Please include front & back covers in the total page count</span> </td>
+                    <td width="100" align="center"><input type="text"  id="txt1" value="" name="epub" onkeyup="sum();" /></td>
+                    <td><input type="text"  id="txt2" value=""  name="aepub" /></td>
+                    <td><input type="text"  id="txt3" value="50"  name="cepub" /> </td>
+                    <td><input type="text"  id="txt4" value=""  name="tepub" /></td>
+                  </tr>
+                  <tr>
+                    <td width="490"><h4>Total Number of Images in the Book </h4>
+                      <span class="Customize_totalnumber">Upto 10 images are included in the Base price. <br />
+                      Additional images  will  be  billed 
+                      at $3.0 per images</span> </td>
+                    <td width="100" align="center"><input type="text"  id="ima1" value="" name="image" onkeyup="Images();" /></td>
+                    <td><input type="text"  id="ima2" value="" name="aimage" /></td>
+                    <td><input type="text"  id="ima3" value="3" name="cimage" /></td>
+                    <td><input type="text"  id="ima4" value="" name="timage"  /></td>
+                  </tr>
+                  <tr>
+                    <td width="490"><h4>Total Number of Foot Notes & End Notes Linking </h4>
+                      <span class="Customize_totalnumber">Additional links will be billed at .25 cents per link</span> </td>
+                    <td width="100" align="center"><input type="text"  id="ftn1" value="" name="footnotes" onkeyup="FootNotes();" /></td>
+                    <td><input type="text"  id="ftn2" value="" name="afootnotes" /></td>
+                    <td><input type="text"  id="ftn3" value="0.25" name="cfootnotes" /></td>
+                    <td><input type="text"  id="ftn4" value=""  name="tfootnotes" /></td>
+                  </tr>
+                  <tr>
+                    <td width="490"><h4>Total Number of web links, Hyperlinks, email links etc </h4>
+                      <span class="Customize_totalnumber">Upto 10 links are included in the base price. <br />
+                      Additional Hyperlinks will be  billed 
+                      at .25 cents per link</span> </td>
+                    <td width="100" align="center"><input type="text"  id="hyp1" value="" name="hyperlinks" onkeyup="Hyperlinks();"  /></td>
+                    <td><input type="text"  id="hyp2" value="" name="ahyperlinks" /></td>
+                    <td><input type="text"  id="hyp3" value="0.25"  name="chyperlinks" /></td>
+                    <td><input type="text"  id="hyp4" value="" name="thyperlinks" /></td>
+                  </tr>
+                </table>
+                <h3>Does Your Book contain any of the following elements</h3>
+                <div class="Customize_Bookcontain_content"> <span class="Customize_Bookcontain">When 2 to 4 elements are selected,it adds 30% to the bace cost,</span><br />
+                  <span class="Customize_Bookcontain">When 5 & Above elements are selected,it adds 50% to the bace cost</span> </div>
+                <div class="Customize_Bookcontain_total">
+                  <input type="text" />
+                </div>
+                <br/><table width="1000" cellspacing="0">
+                  <tr>
+                    <td width="350"><h4>Nested TOC</h4></td>
+                    <td width="150" align="center"><input type="checkbox" name="nestedtoc" /></td>
+                    <td width="350"><h4>Drop Caps</h4></td>
+                    <td width="150" align="center"><input type="checkbox" name="dropcaps" /></td>
+                  </tr>
+                  <tr>
+                    <td width="350"><h4>Colored Fonts</h4></td>
+                    <td width="150" align="center"><input type="checkbox"  name="coloredfonts"/></td>
+                    <td width="350"><h4>Lists</h4></td>
+                    <td width="150" align="center"><input type="checkbox" name="lists" /></td>
+                  </tr>
+                  <tr>
+                    <td width="350"><h4>Multiple Sections and Sub-Sections</h4></td>
+                    <td width="150" align="center"><input type="checkbox" name="multiplesections" /></td>
+                    <td width="350"><h4>Call Outs</h4></td>
+                    <td width="150" align="center"><input type="checkbox" name="callouts" /></td>
+                  </tr>
+                  <tr>
+                    <td width="350"><h4>Double Column Text</h4></td>
+                    <td width="150" align="center"><input type="checkbox" name="doublecolumntext"/></td>
+                    <td width="350"><h4>Centered Text</h4></td>
+                    <td width="150" align="center"><input type="checkbox"  name="centeredtext"/></td>
+                  </tr>
+                  <tr>
+                    <td width="350"><h4>Text boxes with borders/varying colors</h4></td>
+                    <td width="150" align="center"><input type="checkbox"  name="textboxeswithborders"/></td>
+                    <td width="350"><h4></h4></td>
+                    <td width="150" align="center"></td>
+                  </tr>
+                </table>
+                <h3>Does Your Book Need Audio/Video Elements</h3>
+                <table width="1000" cellspacing="0">
+                  <tr>
+                    <td width="450" valign="top"><h4>Total Number of Audio/Video Elements in the book. <img  class="helpTip" title="Each Audio/Video file insert will be charged at the rate of $30.00.&#013; &#013; This feature is currently supported only on ePUB format.&#013; &#013; Epub files with Audio/Video elements are supported by Apple, Google Android, Sony and Kobo stores ant their devices." src="images/help2.png" width="32" height="32" alt="help" /></h4></td>
+                    <td width="100" align="center"><input type="text"  name="totalnumberofaudio" /></td>
+                    <td></td>
+                    <td align="center">N/A</td>
+                    <td align="center">N/A</td>
+                  </tr>
+                </table>
+                <h3>Does your Book need Cover design?</h3>
+                <table width="1000" cellspacing="0">
+                  <tr>
+                    <td width="468"><h4>Simple Cover Design</h4></td>
+                    <td width="171" align="left"><input type="radio" name="CoverDesign" name="simplecoverdesign" /></td>
+                    <td colspan="3"><span class="store_format_isbn">$149.00</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="468"><h4>High Impact Cover Design</h4></td>
+                    <td width="171" align="left"><input type="radio" name="CoverDesign" name="highimpactcoverdesign" /></td>
+                    <td colspan="3"><span class="store_format_isbn">$249.00</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="468"><h4>EISBN Cost </h4></td>
+                    <td colspan="2" align="center"><span class="store_format">ePUB</span> <span class="store_format_checkbox">
+                      <input type="checkbox" name="eisbncostepub" />
+                    </span> <span class="store_format_isbn">$9.99</span></td>
+                    <td width="154"><span class="store_format">Mobi</span> <span class="store_format_checkbox">
+                      <input type="checkbox" name="eisbncostmobi" />
+                      </span> <span class="store_format_isbn">$9.99</span> </td>
+                    <td width="154"><span class="store_format">Nook</span> <span class="store_format_checkbox">
+                      <input type="checkbox" name="eisbncostnook" />
+                      </span> <span class="store_format_isbn">$9.99</span> </td>
+                  </tr>
+                </table>
+                <h3>eBook Publishing, Distribution and Royalties</h3>
+                <table width="1000" cellspacing="0">
+                  <tr>
+                    <td width="450" valign="top"><h4>I will take care of the distribution myself</h4></td>
+                    <td align="left"><input type="radio"  name="ebookpublishing" /></td>
+                  </tr>
+                  <tr>
+                    <td width="450"><h4>I would like eBooks2go to be my distribution agent..  <img src="images/PDFdownload.png" alt="view/download odf" width="24" /></h4></td>
+                    <td align="left"><input type="radio" name="ebooks2gotobemydistribution"  /></td>
+                  </tr>
+                </table>
+                <h3>Marketing Services </h3>
+                <table width="1000" cellspacing="0">
+                  <tr>
+                    <td width="450"><h4>Social Media Setup</h4></td>
+                    <td width="100" align="left"><input type="checkbox"  name="socialmediasetup" /></td>
+                    <td align="center"><span class="store_format_isbn">$250.00</span></td>
+                  </tr>
+                  <tr>
+                    <td><h4>Press Release</h4></td>
+                    <td align="left"><input type="checkbox"  name="pressrselease" /></td>
+                    <td align="center"><span class="store_format_isbn">$250.00</span></td>
+                  </tr>
+                  <tr>
+                    <td><h4>Email Campaign</h4></td>
+                    <td align="left"><input type="checkbox" name="emailcampaign"  /></td>
+                    <td align="center"><span class="store_format_isbn">$250.00</span></td>
+                  </tr>
+                  <tr>
+                    <td><h4>Website and Blog Promotion</h4></td>
+                    <td align="left"><input type="checkbox" name="websiteandblogpromotion" /></td>
+                    <td align="center"><span class="store_format_isbn">$250.00</span></td>
+                  </tr>
+                  <tr>
+                    <td><h4>Select all of marketing and get 30 percent off</h4></td>
+                    <td align="left"><input type="checkbox" name="selectallgetpercentoff" /></td>
+                    <td align="center"><span class="store_format_isbn">$700.00</span></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div id="view2" class="tabcontent">
+            <div id="StandardeBookFormat">
+              <div class="eb2g_StandardFormateBook">
+                <div class="eb2g_headerleft">
+                  <div class="eb2g_StandardFormat_title">Enhanced eBook:<br />
+                    <span class="book_style">Fixed Format Text Layout</span><br />
+                    <br />
+                    Basic Packages includes </div>
+                  <div class="eb2g_StandardFormat_content">
+                    <table width="250" cellspacing="0">
+                      <tr>
+                        <td><li>Up to 50 pages</li></td>
+                      </tr>
+                     
+                      <tr>
+                        <td><li>10 Hyperlinks </li></td>
+                      </tr>
+                      <tr>
+                        <td><li>TOC Linking</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>QC Check </li></td>
+                      </tr>
+                      
+                    </table>
+                  </div>
+                  <div class="eb2g_StandardFormat_titleimg"> <img src="images/EnhancedeBookformating.png" alt="" /></div>
+                  <div class="eb2g_discountprice">
+                    <div class="blueclock">
+                      <div style="transform: rotate(0deg) scale(1, 1); display: block;" class="pendulum-parent">
+                        <div class="ebooks_discount" align="center">
+                        <b>Offers</b>
+                        <ul>
+                        <li>Select any ' 2 ' products get 10% Discount on base price </li>
+
+<li>Select any ' 3 ' products get 20% Discount on base price</li></ul>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="eb2g_headerright">
+                  <div class="box-heading">Choose product(s) </div>
+                  <div class="box-content">
+                    <div class="eb2g_products">
+                      <div class="eb2g_products_details_eup">
+                        <table>
+                          <tr class="store_name">
+                            <td width="93" rowspan="2" valign="middle"><input type="checkbox" name="epub" id="epub3" />
+                            <label for="epub3"><img style="margin-top:8px;" src="images/epub3.png" alt="epub" /></label>                              </td>
+                            <td width="222"><span class="product_details">Apple and Android supported devices such as Samsung, Lenovo, Kobo & Sony</span></td>
+                          </tr>
+                          
+                          <tr>
+                            <td align="center" class="productPrice">$249.00</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="eb2g_products_details_mobi">
+                        <table width="319">
+                          <tr class="store_name">
+                            <td style="padding-top:8px;" width="93" rowspan="2"><input type="checkbox" name="kindle" id="kindle2" />
+                            <label for="kindle2"><img src="images/kindle.png" width="511" height="511" alt="kindle" /></label>                              </td>
+                            <td width="214"><span class="product_details">Works only with Amazon kindle fire devices.</span></td>
+                          </tr>
+                          <tr>
+                            <td align="center" class="productPrice">$249.00</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="eb2g_products_details_epdf">
+                        <table width="100%">
+                          <tr class="store_name">
+                            <td width="93" rowspan="2"><input type="checkbox" name="nook" id="nook" />
+                            <label for="nook"><img style="margin-top:10px;" src="images/nook.png" width="150" height="150" alt="epdf" /></label>                              </td>
+                            <td><span class="product_details"> Works only with Nook devices.</span></td>
+                          </tr>
+                          
+                          <tr>
+                            <td align="center" class="productPrice">$249.00</td>
+                          </tr>
+                        </table>
+                      </div>
+                      
+                    </div>
+                    <div class="eb2g_products_cost">
+                      <div class="eb2g_PackageCost">Package Cost <br />
+                        <input type="text" id="totalamount"  />
+                      </div>
+                      <div class="eb2g_addtocart"> <a href="#"><img src="images/addtocart.jpg" alt="" /> </a></div>
+                      <div class="eb2g_viewcart"> <a href="#"><img src="images/viewcart.jpg" alt="" /> </a></div>
+                      
+                    </div>
+                    <br/>
+                  
+                    <br class="clear" />;
+                  </div>
+                </div>
+              </div>
+           
+              <div>&nbsp;</div>
+              <p></p>
+              <hr>
+              <span class="Customizeyourproduct">
+              <h3>Customize your product</h3>
+              <p>&nbsp; </p>
+              </span>
+              <div class="Customize_pricing">
+                <table width="1000" cellspacing="0" class="customize_products">
+                  <td width="490"><h4>Total Number of pages in the Book</h4>
+                      <span class="Customize_totalnumber">Upto 50 pages are included in the base price. <br />
+                      Additional pages will be billed at $5.0 per page Please include front & back covers in the total page count</span> </td>
+                    <td width="100" align="center"><input type="text"  id="txt1" value="" name="pages" /></td>
+                    <td><input type="text"  id="txt2" value="" name="apages"  /></td>
+                    <td><input type="text"  id="txt3" value="5" name="cpages"  /> </td>
+                    <td><input type="text"  id="txt4" value="" name="tpages" /></td>
+                  </tr>
+                  <tr>
+                    <td width="490"><h4>Total Number of web links, Hyperlinks, email links etc</h4>
+                      <span class="Customize_totalnumber">Upto 10 links are included in the base price. <br />
+                      Additional Hyperlinks will be billed at .50 cents per link</span> </td>
+                    <td width="100" align="center"><input type="text"  id="links" value="" name="links" /></td>
+                    <td><input type="text"  id="ima2" value=""  name="alinks" /></td>
+                    <td><input type="text"  id="ima3" value="0.5"  name="clinks" /></td>
+                    <td><input type="text"  id="ima4" value=""  name="tlinks" /></td>
+                  </tr>
+                  <tr>
+                    <td width="490"><h4>EISBN Cost </h4></td>
+                    <td width="100" align="center"></td>
+                    <td width="135"><span class="store_format">ePUB</span> <span class="store_format_checkbox">
+                      <input type="checkbox"  name="eisbnepub" />
+                      </span> <span class="store_format_isbn">$9.99</span></td>
+                    <td width="135"><span class="store_format">Mobi</span> <span class="store_format_checkbox">
+                      <input type="checkbox" name="eisbnmobi" />
+                      </span> <span class="store_format_isbn">$9.99</span> </td>
+                    <td width="135"><span class="store_format">Nook</span> <span class="store_format_checkbox">
+                      <input type="checkbox" name="eisbnnook" />
+                      </span> <span class="store_format_isbn">$9.99</span> </td>
+                  </tr>
+                </table>
+                <h3>Does Your Book contain any of the following elements</h3>
+                <div class="Customize_Bookcontain_content"> <span class="Customize_Bookcontain">When 2 to 4 elements are selected,it adds 30% to the bace cost,</span><br />
+                  <span class="Customize_Bookcontain">When 5 & Above elements are selected,it adds 50% to the bace cost</span> </div>
+                <div class="Customize_Bookcontain_total">
+                  <input type="text" name="doesyourbookelements" />
+                </div>
+                <table width="1000" cellspacing="0">
+                  <tr>
+                    <td width="350"><h4>Nested TOC</h4></td>
+                    <td width="150" align="center"><input type="checkbox" name="enestedtoc1"  /></td>
+                    <td width="350"><h4>Drop Caps</h4></td>
+                    <td width="150" align="center"><input type="checkbox" name="edropcaps" /></td>
+                  </tr>
+                  <tr>
+                    <td width="350"><h4>Colored Fonts</h4></td>
+                    <td width="150" align="center"><input type="checkbox" name="ecoloredfonts" /></td>
+                    <td width="350"><h4>Lists</h4></td>
+                    <td width="150" align="center"><input type="checkbox"  name="elists"/></td>
+                  </tr>
+                  <tr>
+                    <td width="350"><h4>Multiple Sections and Sub-Sections</h4></td>
+                    <td width="150" align="center"><input type="checkbox"  name="emultiplesections"/></td>
+                    <td width="350"><h4>Call Outs</h4></td>
+                    <td width="150" align="center"><input type="checkbox" name="ecallouts" /></td>
+                  </tr>
+                  <tr>
+                    <td width="350"><h4>Double Column Text</h4></td>
+                    <td width="150" align="center"><input type="checkbox" name="edoublecolumntext" /></td>
+                    <td width="350"><h4>Centered Text</h4></td>
+                    <td width="150" align="center"><input type="checkbox" name="ecenteredtext" /></td>
+                  </tr>
+                  <tr>
+                    <td width="350"><h4>Text boxes with borders/varying colors</h4></td>
+                    <td width="150" align="center"><input type="checkbox" name="etextboxeswithborders" /></td>
+                    <td width="350"><h4></h4></td>
+                    <td width="150" align="center"></td>
+                  </tr>
+                </table>
+                <h3>Does Your Book Need Audio/Video Elements</h3>
+                <table width="1000" cellspacing="0">
+                  <tr>
+                    <td width="450" valign="top"><h4>Total Number of Audio/Video Elements in the book <img class="helpTip" title="Each Audio/Video file insert will be charged at the rate of $30.00.&#013; &#013; This feature is currently supported only on ePUB format.&#013; &#013; Epub files with Audio/Video elements are supported by Apple, Google Android, Sony and Kobo stores ant their devices." src="images/help2.png" width="32" height="32" alt="help" /></h4></td>
+                    <td width="100" align="center"><input type="text" name="eaudiovideoelements" /></td>
+                    <td></td>
+                    <td align="center">N/A</td>
+                    <td align="center">N/A</td>
+                  </tr>
+                </table>
+                <h3>Does your book need Read Aloud with Text High light</h3>
+                <table width="1000" cellspacing="0">
+                  <tr>
+                    <td width="450" valign="top"><h4>Total Number of words requiring Text High Lights <img class="helpTip" title="Total number of words requiring Text Highlite will be charged @ 10 cents." src="images/help2.png" width="32" height="32" alt="help" /></h4></td>
+                    <td width="100" align="center"><input type="text" name="enumberofwordsrequiring" /></td>
+                    <td></td>
+                    <td align="center">N/A</td>
+                    <td align="center">N/A</td>
+                  </tr>
+                </table>
+                <h3>Does your Book need Cover design?</h3>
+                <table width="1000" cellspacing="0">
+                  <tr>
+                    <td width="450"><h4>Simple Cover Design</h4></td>
+                    <td width="100" align="left"><input type="radio" name="ecoverdesign" /></td>
+                    <td><span class="store_format_isbn">$149.00</span></td>
+                  </tr>
+                  <tr>
+                    <td width="450"><h4>High Impact Cover Design</h4></td>
+                    <td width="100" align="left"><input type="radio" name="ecoverdesign"  /></td>
+                    <td><span class="store_format_isbn">$249.00</span></td>
+                  </tr>
+                </table>
+                <h3>eBook Publishing, Distribution and Royalties</h3>
+                <table width="1000" cellspacing="0">
+                  <tr>
+                    <td width="450" valign="top"><h4>I will take care of the distribution myself</h4></td>
+                    <td align="left" valign="top"><input type="radio" name="edistributionmyself" /></td>
+                  </tr>
+                  <tr>
+                    <td width="450" valign="top"><h4>I would like eBooks2go to be my distribution agent</h4></td>
+                    <td align="left" valign="top"><input type="radio" name="ebooksdistribution"  /></td>
+                  </tr>
+                </table>
+                <h3>Marketing Services </h3>
+                <table width="1000" cellspacing="0">
+                  <tr>
+                    <td width="450"><h4>Social Media Setup</h4></td>
+                    <td width="100" align="left"><input type="checkbox" name="esocialmediasetup" /></td>
+                    <td align="center"><span class="store_format_isbn">$250.00</span></td>
+                  </tr>
+                  <tr>
+                    <td><h4>Press Release</h4></td>
+                    <td align="left"><input type="checkbox" name="epressrelease" /></td>
+                    <td align="center"><span class="store_format_isbn">$250.00</span></td>
+                  </tr>
+                  <tr>
+                    <td><h4>Email Campaign</h4></td>
+                    <td align="left"><input type="checkbox" name="eemailcampaign" /></td>
+                    <td align="center"><span class="store_format_isbn">$250.00</span></td>
+                  </tr>
+                  <tr>
+                    <td><h4>Website and Blog Promotion</h4></td>
+                    <td align="left"><input type="checkbox"  name="ewebsiteblogpromotion" /></td>
+                    <td align="center"><span class="store_format_isbn">$250.00</span></td>
+                  </tr>
+                  <tr>
+                    <td><h4>Select all of marketing and get 30 percent off</h4></td>
+                    <td align="left"><input type="checkbox"  name="eselectallofmarketingpercentoff" /></td>
+                    <td align="center"><span class="store_format_isbn">$700.00</span></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div id="view3" class="tabcontent">
+            <div id="apDiv2"> <span class="ebookappstyps">
+              <div id="accordion">
+                <div class="selectiteams">
+                  <h4>
+                    <input type="radio" name="radio1" id="preview" checked="checked" onclick=" Toggle();showMe('div1', 'div2', 'div3', this)" />
+                    Simple eBook Apps</h4>
+                </div>
+                <div>
+                  <div class="eb2g_StandardFormat_contents">
+                    <table width="250" cellspacing="0">
+                      <tr>
+                        <td><li>Number of Pages - upto 30</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>App Icon Creation</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Splash Page creation</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Read Aloud - Voice Integration</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Share with Social Media / Twitter</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Help with upload to App Store</li></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="selectiteams">
+                  <h4>
+                    <input type="radio" name="radio1" id="preview" onclick=" Toggle();showMe('div2', 'div3','div1', this)" />
+                    Complex eBook Apps</h4>
+                </div>
+                <div>
+                  <div class="eb2g_StandardFormat_contents">
+                    <table width="250" cellspacing="0">
+                      <tr>
+                        <td><li>Number of Pages - upto 30</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>App Icon Creation</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Splash Page creation</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Animation for upto 10 pages</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Read Aloud - Voice Integration</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Share with Social Media / Twitter</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Help with upload to App Store</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Animation - $100 for each additonal page, either device?</li></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="selectiteams">
+                  <h4>
+                    <input type="radio" name="radio1" id="preview" onclick=" Toggle();showMe('div3','div1', 'div2', this)" />
+                    eBook Apps for Textbooks</h4>
+                </div>
+                <div>
+                  <div class="eb2g_StandardFormat_contents">
+                    <table width="250" cellspacing="0">
+                      <tr>
+                        <td><li>Number of Pages - upto 200</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>App Icon Creation</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Splash Page creation</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>TOC/Chapter Linking</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Page Conversion to HTML/XML</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Interactive Self Assessments,Q &  A</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Share with Social Media / Twitter</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Video & Audio Integration</li></td>
+                      </tr>
+                      <tr>
+                        <td><li>Upload to App Store</li></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              </span></div>
+            <div class="divstyle" id="div1">
+              <div id="StandardeBookFormat">
+                <div class="eb2g_StandardFormateBook">
+                  <div class="eb2g_headerleft">
+                    <div class="eb2g_StandardFormat_title">eBook Apps:</div>
+                    <div style="height:135px; width:200px;"></div>
+                    <div class="eb2g_StandardFormat_titleimg"> <img src="images/EnhancedeBookformating.png" alt="" /></div>
+                    <div id="apDiv3">
+                      <div class="eb2g_discountpricetag"><img src="images/tag.png" style="margin-left:50px; margin-top:30px;" alt="" /></div>
+                    </div>
+                    <div class="eb2g_discountprice">
+                      <div class="blueclock">
+                        <div style="transform: rotate(0deg) scale(1, 1); display: block;" class="pendulum-parent">
+                          <div class="ebooks_discount" align="center">
+                            <div class="ebooks_discount_titles"><span class="ebooks_discount_list"><img src="images/star.png" alt="" /></span>Select any 2 product get 10% 
+                              Discount on base price <br />
+                              <br />
+                              <span class="ebooks_discount_list"><img src="images/star.png" alt="" /></span>Select any 3 product get 20% 
+                              Discount on base price </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="eb2g_headerright">
+                    <div class="box-heading">Choose product(s) </div>
+                    <div class="apps-box-content">
+                      <div class="eb2g_products">
+                        <div class="eb2g_products_details">Product</div>
+                        <div class="eb2g_products_details_right">Cost</div>
+                        <div class="eb2g_products_details_eup">
+                          <table>
+                            <tr class="store_name">
+                              <td width="220"><input id="epub" type="checkbox" service="1" title="ePUB Package" value="449" name="PackageName"  style="margin-left:15px;" />
+                                IPad </td>
+                              <td>$449.00</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" class="product_details">&nbsp; Works only with IPad & IPad mini </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="eb2g_products_details_mobi">
+                          <table>
+                            <tr class="store_name">
+                              <td width="220"><input id="Mobi" type="checkbox" service="2" title="Mobi Package" value="449" name="PackageName"  style="margin-left:15px;" />
+                                IPhone</td>
+                              <td>$449.00</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" class="product_details">&nbsp; Works only with IPhone 3,4,5 </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="eb2g_products_details_epdf">
+                          <table>
+                            <tr class="store_name">
+                              <td width="220"><input id="ePDF" type="checkbox" service="3" title="ePDF Package" value="449" name="PackageName"  style="margin-left:15px;" />
+                                Android Tablets</td>
+                              <td>$449.00</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" class="product_details">&nbsp; Works only with 10 inch and 7 inch</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="eb2g_products_details_andriodphone">
+                          <table>
+                            <tr class="store_name">
+                              <td width="220"><input id="ePDF" type="checkbox" service="4" title="ePDF Package" value="449" name="PackageName"  style="margin-left:15px;" />
+                                Android Phones</td>
+                              <td>$449.00</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" class="product_details">&nbsp; All Android smartphones 3.2 versions   devices</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="eb2g_products_cost">
+                        <div class="eb2g_PackageCost">Package Cost <br />
+                          <input type="text" id="totalamount"  />
+                        </div>
+                        <div class="eb2g_addtocart"> <a href="#"><img src="images/addtocart.jpg" alt="" /> </a></div>
+                        <div class="eb2g_viewcart"> <a href="#"><img src="images/viewcart.jpg" alt="" /> </a></div>
+                        <div class="eb2g_checkout"> <a href="#"><img src="images/checkout_btn.jpg" alt="" /> </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>&nbsp;</div>
+                <hr>
+                <span class="Customizeyourproduct">
+                <h3>Customize your product</h3>
+                </span>
+                <div class="Customize_pricing">
+                  <table width="1000" cellspacing="0" class="customize_products">
+                    <td width="490"><h4>Total Number of pages in the Book</h4></td>
+                      <td width="100" align="center"><input type="text" /></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td width="490"><h4>Total Number of web links, Hyperlinks, email links etc</h4></td>
+                      <td width="100" align="center"><input type="text" /></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td width="490"><h4>EISBN Cost </h4></td>
+                      <td width="100" align="center"></td>
+                      <td width="135"><span class="store_format">ePUB</span> <span class="store_format_checkbox">
+                        <input type="checkbox" />
+                        </span> <span class="store_format_isbn">$9.99</span></td>
+                      <td width="135"><span class="store_format">Mobi</span> <span class="store_format_checkbox">
+                        <input type="checkbox" />
+                        </span> <span class="store_format_isbn">$9.99</span> </td>
+                      <td width="135"><span class="store_format">ePDF</span> <span class="store_format_checkbox">
+                        <input type="checkbox" />
+                        </span> <span class="store_format_isbn">$9.99</span> </td>
+                    </tr>
+                  </table>
+                  <h3>Samples Application</h3>
+                  <div class="container">
+                    <section id="dg-container" class="dg-container">
+                      <div class="dg-wrapper"> <a href="#"><img src="images/1.png" alt="image01">
+                        <div>Time Soldiers</div>
+                        </a> <a href="#"><img src="images/2.png" alt="image02">
+                        <div>Time Soldiers</div>
+                        </a> <a href="#"><img src="images/3.png" alt="image03">
+                        <div>Time Soldiers</div>
+                        </a> </div>
+                      <!--nav>	
+					<span class="dg-prev">&lt;</span>
+					<span class="dg-next">&gt;</span>
+				</nav-->
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="divstyle" id="div2">
+              <div id="StandardeBookFormat">
+                <div class="eb2g_StandardFormateBook">
+                  <div class="eb2g_headerleft">
+                    <div class="eb2g_StandardFormat_title">eBook Apps:</div>
+                    <div style="height:135px; width:200px;"></div>
+                    <div class="eb2g_StandardFormat_titleimg"> <img src="images/EnhancedeBookformating.png" alt="" /></div>
+                    <div id="apDiv3">
+                      <div class="eb2g_discountpricetag"><img src="images/tag.png" style="margin-left:50px; margin-top:30px;" alt="" /></div>
+                    </div>
+                    <div class="eb2g_discountprice">
+                      <div class="blueclock">
+                        <div style="transform: rotate(0deg) scale(1, 1); display: block;" class="pendulum-parent">
+                          <div class="ebooks_discount" align="center">
+                            <div class="ebooks_discount_titles"><span class="ebooks_discount_list"><img src="images/star.png" alt="" /></span>Select any 2 product get 10% 
+                              Discount on base price <br />
+                              <br />
+                              <span class="ebooks_discount_list"><img src="images/star.png" alt="" /></span>Select any 3 product get 20% 
+                              Discount on base price </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="eb2g_headerright">
+                    <div class="box-heading">Choose product(s) </div>
+                    <div class="apps-box-content">
+                      <div class="eb2g_products">
+                        <div class="eb2g_products_details">Product</div>
+                        <div class="eb2g_products_details_right">Cost</div>
+                        <div class="eb2g_products_details_eup">
+                          <table>
+                            <tr class="store_name">
+                              <td width="220"><input id="epub" type="checkbox" service="1" title="ePUB Package" value="999" name="PackageName"  style="margin-left:15px;" />
+                                IPad </td>
+                              <td>$999.00</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" class="product_details">&nbsp; Works only with IPad & IPad mini </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="eb2g_products_details_mobi">
+                          <table>
+                            <tr class="store_name">
+                              <td width="220"><input id="Mobi" type="checkbox" service="2" title="Mobi Package" value="999" name="PackageName"  style="margin-left:15px;" />
+                                IPhone</td>
+                              <td>$999.00</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" class="product_details">&nbsp; Works only with IPhone 3,4,5 </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="eb2g_products_details_epdf">
+                          <table>
+                            <tr class="store_name">
+                              <td width="220"><input id="ePDF" type="checkbox" service="3" title="ePDF Package" value="999" name="PackageName"  style="margin-left:15px;" />
+                                Android Tablets</td>
+                              <td>$999.00</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" class="product_details">&nbsp; Works only with 10 inch and 7 inch</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="eb2g_products_details_andriodphone">
+                          <table>
+                            <tr class="store_name">
+                              <td width="220"><input id="ePDF" type="checkbox" service="4" title="ePDF Package" value="999" name="PackageName"  style="margin-left:15px;" />
+                                Android Phones</td>
+                              <td>$999.00</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" class="product_details">&nbsp; All Android smartphones 3.2 versions   devices</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="eb2g_products_cost">
+                        <div class="eb2g_PackageCost">Package Cost <br />
+                          <input type="text" id="totalamount"  />
+                        </div>
+                        <div class="eb2g_addtocart"> <a href="#"><img src="images/addtocart.jpg" alt="" /> </a></div>
+                        <div class="eb2g_viewcart"> <a href="#"><img src="images/viewcart.jpg" alt="" /> </a></div>
+                        <div class="eb2g_checkout"> <a href="#"><img src="images/checkout_btn.jpg" alt="" /> </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>&nbsp;</div>
+                <hr>
+                <span class="Customizeyourproduct">
+                <h3>Customize your product</h3>
+                </span>
+                <div class="Customize_pricing">
+                  <table width="1000" cellspacing="0" class="customize_products">
+                    <td width="490"><h4>Total Number of pages in the Book</h4></td>
+                      <td width="100" align="center"><input type="text" /></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td width="490"><h4>Total Number of web links, Hyperlinks, email links etc</h4></td>
+                      <td width="100" align="center"><input type="text" /></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td width="490"><h4>EISBN Cost </h4></td>
+                      <td width="100" align="center"></td>
+                      <td width="135"><span class="store_format">ePUB</span> <span class="store_format_checkbox">
+                        <input type="checkbox" />
+                        </span> <span class="store_format_isbn">$9.99</span></td>
+                      <td width="135"><span class="store_format">Mobi</span> <span class="store_format_checkbox">
+                        <input type="checkbox" />
+                        </span> <span class="store_format_isbn">$9.99</span> </td>
+                      <td width="135"><span class="store_format">ePDF</span> <span class="store_format_checkbox">
+                        <input type="checkbox" />
+                        </span> <span class="store_format_isbn">$9.99</span> </td>
+                    </tr>
+                  </table>
+                  <h3>Samples Application</h3>
+                  <div class="container">
+                    <section id="dg-container1" class="dg-container1">
+                      <div class="dg-wrapper"> <a href="#"><img src="images/1.png" alt="image01">
+                        <div>Time Soldiers</div>
+                        </a> <a href="#"><img src="images/2.png" alt="image02">
+                        <div>Time Soldiers</div>
+                        </a> <a href="#"><img src="images/3.png" alt="image03">
+                        <div>Time Soldiers</div>
+                        </a> </div>
+                      <!--nav>	
+					<span class="dg-prev">&lt;</span>
+					<span class="dg-next">&gt;</span>
+				</nav-->
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="divstyle" id="div3">
+              <div id="StandardeBookFormat">
+                <div class="eb2g_StandardFormateBook">
+                  <div class="eb2g_headerleft">
+                    <div class="eb2g_StandardFormat_title">eBook Apps:</div>
+                    <div style="height:135px; width:200px;"></div>
+                    <div class="eb2g_StandardFormat_titleimg"> <img src="images/EnhancedeBookformating.png" alt="" /></div>
+                    <div id="apDiv3">
+                      <div class="eb2g_discountpricetag"><img src="images/tag.png" style="margin-left:50px; margin-top:30px;" alt="" /></div>
+                    </div>
+                    <div class="eb2g_discountprice">
+                      <div class="blueclock">
+                        <div style="transform: rotate(0deg) scale(1, 1); display: block;" class="pendulum-parent">
+                          <div class="ebooks_discount" align="center">
+                            <div class="ebooks_discount_titles"><span class="ebooks_discount_list"><img src="images/star.png" alt="" /></span>Select any 2 product get 10% 
+                              Discount on base price <br />
+                              <br />
+                              <span class="ebooks_discount_list"><img src="images/star.png" alt="" /></span>Select any 3 product get 20% 
+                              Discount on base price </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="eb2g_headerright">
+                    <div class="box-heading">Choose product(s) </div>
+                    <div class="apps-box-content">
+                      <div class="eb2g_products">
+                        <div class="eb2g_products_details">Product</div>
+                        <div class="eb2g_products_details_right">Cost</div>
+                        <div class="eb2g_products_details_eup">
+                          <table>
+                            <tr class="store_name">
+                              <td width="220"><input id="epub" type="checkbox" service="1" title="ePUB Package" value="999" name="PackageName"  style="margin-left:15px;" />
+                                IPad </td>
+                              <td>$999.00</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" class="product_details">&nbsp; Works only with IPad & IPad mini </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="eb2g_products_details_mobi">
+                          <table>
+                            <tr class="store_name">
+                              <td width="220"><input id="Mobi" type="checkbox" service="2" title="Mobi Package" value="999" name="PackageName"  style="margin-left:15px;" />
+                                IPhone</td>
+                              <td>$999.00</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" class="product_details">&nbsp; Works only with IPhone 3,4,5 </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="eb2g_products_details_epdf">
+                          <table>
+                            <tr class="store_name">
+                              <td width="220"><input id="ePDF" type="checkbox" service="3" title="ePDF Package" value="999" name="PackageName"  style="margin-left:15px;" />
+                                Android Tablets</td>
+                              <td>$999.00</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" class="product_details">&nbsp; Works only with 10 inch and 7 inch</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="eb2g_products_details_andriodphone">
+                          <table>
+                            <tr class="store_name">
+                              <td width="220"><input id="ePDF" type="checkbox" service="4" title="ePDF Package" value="999" name="PackageName"  style="margin-left:15px;" />
+                                Android Phones</td>
+                              <td>$999.00</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" class="product_details">&nbsp; All Android smartphones 3.2 versions   devices</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="eb2g_products_cost">
+                        <div class="eb2g_PackageCost">Package Cost <br />
+                          <input type="text" id="totalamount"  />
+                        </div>
+                        <div class="eb2g_addtocart"> <a href="#"><img src="images/addtocart.jpg" alt="" /> </a></div>
+                        <div class="eb2g_viewcart"> <a href="#"><img src="images/viewcart.jpg" alt="" /> </a></div>
+                        <div class="eb2g_checkout"> <a href="#"><img src="images/checkout_btn.jpg" alt="" /> </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>&nbsp;</div>
+                <hr>
+                <span class="Customizeyourproduct">
+                <h3>Customize your product</h3>
+                </span>
+                <div class="Customize_pricing">
+                  <table width="1000" cellspacing="0" class="customize_products">
+                    <td width="490"><h4>Total Number of pages in the Book</h4></td>
+                      <td width="100" align="center"><input type="text" /></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td width="490"><h4>Total Number of web links, Hyperlinks, email links etc</h4></td>
+                      <td width="100" align="center"><input type="text" /></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td width="490"><h4>EISBN Cost </h4></td>
+                      <td width="100" align="center"></td>
+                      <td width="135"><span class="store_format">ePUB</span> <span class="store_format_checkbox">
+                        <input type="checkbox" />
+                        </span> <span class="store_format_isbn">$9.99</span></td>
+                      <td width="135"><span class="store_format">Mobi</span> <span class="store_format_checkbox">
+                        <input type="checkbox" />
+                        </span> <span class="store_format_isbn">$9.99</span> </td>
+                      <td width="135"><span class="store_format">ePDF</span> <span class="store_format_checkbox">
+                        <input type="checkbox" />
+                        </span> <span class="store_format_isbn">$9.99</span> </td>
+                    </tr>
+                  </table>
+                  <h3>Samples Application</h3>
+                  <div class="container">
+                    <section id="dg-container2" class="dg-container2">
+                      <div class="dg-wrapper"> <a href="#"><img src="images/1.png" alt="image01">
+                        <div>Time Soldiers</div>
+                        </a> <a href="#"><img src="images/2.png" alt="image02">
+                        <div>Time Soldiers</div>
+                        </a> <a href="#"><img src="images/3.png" alt="image03">
+                        <div>Time Soldiers</div>
+                        </a> </div>
+                      <!--nav>	
+					<span class="dg-prev">&lt;</span>
+					<span class="dg-next">&gt;</span>
+				</nav-->
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="view4" class="tabcontent">
+            <h4>Multiple Tabs</h4>
+            <p>You can have multiple tabs on the same page, with only one copy of the CSS (javascript is not required).</p>
+          </div>
+          <div id="view5" class="tabcontent">
+            <h4>Multiple Tabs</h4>
+            <p>You can have multiple tabs on the same page, with only one copy of the CSS (javascript is not required).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="js/jquery.gallery.js"></script>
+<script type="text/javascript">
+			$(function() {
+				$('#dg-container').gallery({
+					autoplay	:	true
+				});
+			});
+		</script>
+<script type="text/javascript">
+			$(function() {
+				$('#dg-container1').gallery({
+					autoplay	:	true
+				});
+			});
+		</script>
+<script type="text/javascript">
+			$(function() {
+				$('#dg-container2').gallery({
+					autoplay	:	true
+				});
+			});
+		</script>
+</body>
+</html>

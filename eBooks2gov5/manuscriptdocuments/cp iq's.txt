@@ -1,0 +1,18 @@
+what is http handler
+
+iis life cycle
+
+diff between truncate and delete and drop
+
+replce $(dolor) in jquery
+
+diff webservies and wcf
+
+what is http binding
+
+difference between first firstordefault
+
+how are debug wcf
+
+overloading and overriding in wcf.
+

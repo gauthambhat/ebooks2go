@@ -1,0 +1,95 @@
+
+.eb2g_table
+{
+    font-family: Droid Sans;
+    font-size: 14px;
+}
+
+.eb2g_table input:not([type]), .eb2g_table input[type="text"]
+{
+    background: transparent;
+    width: 300px;
+    padding-left: 12px;
+    font-size: 14px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    color: #242424;
+    height: 33px;
+    -webkit-appearance: none;
+    background: url(../images/text_box.png);
+    background-repeat: no-repeat;
+    outline: none;
+    margin-left: 18px;
+}
+
+.eb2g_table input:not([type]), .eb2g_table input[type="password"]
+{
+    background: transparent;
+    width: 300px;
+    padding-left: 12px;
+    font-size: 14px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    color: #242424;
+    height: 33px;
+    -webkit-appearance: none;
+    background: url(../images/text_box.png);
+    background-repeat: no-repeat;
+    outline: none;
+    margin-left: 18px;
+}
+
+.eb2g_table select
+{
+    background: transparent;
+    width: 300px;
+    padding: 7px;
+    font-size: 14px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    color: #242424;
+    height: 34px;
+    -webkit-appearance: none;
+    background: url(../images/select_bg.png);
+    background-repeat: no-repeat;
+    outline: none;
+    margin-left: 18px;
+}
+
+.eb2g_table input:not([type]), .eb2g_table input[type="submit"]
+{
+    background: url(../images/btn_bg.png);
+    background-repeat: repeat;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    height: 30px;
+    line-height: 25px;
+    padding: 0px 20px 0px 20px;
+    font-family: Droid Sans;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 10px;
+}
+
+.required:after
+{
+    color: red;
+    content: " *";
+    margin-left: 5px;
+}
+
+@font-face
+{
+    font-family: "Droid Sans";
+    src: url(../images/DroidSans.ttf) format("truetype");
+}
+
+.testone
+{
+    width: 300px;
+}

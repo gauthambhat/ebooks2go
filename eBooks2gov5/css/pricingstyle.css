@@ -1,0 +1,38 @@
+@charset "utf-8";
+.main {
+	margin:auto;
+	width: 980px;
+}
+.main_table{ width:980px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+.eb2g_pricing_header{ width:980px;  background-image:url(../images/header_bg.png); border-radius:5px 5px 0px 0px; height:163px; background-repeat:repeat; float:left;}
+
+.store_icon{ height:50px; float:left;width:140px;}
+.store_pricing{ height:60px; float:left; margin-top:10px; width:140px;}
+.store_pricing_checkbox{ height:20px;float:left;width:140px;}
+table{ border-spacing:0px;}
+table tr{ float:left;}
+
+
+
+
+
+.dollarclass{ font-family:Oswald; font-size:27px; color:#FFFFFF;}
+.lfPrice{ font-family:Oswald; font-size:40px; color:#5bc2d4;}
+.rtPrice{ font-family:Oswald; font-size:18px; color:#5bc2d4;}
+
+
+.store_title{ color:#5bc2d4; font-size:30px; font-family:Arial, Helvetica, sans-serif; margin-left:30px; margin-top:10px;}
+.store_title_type{ color:#ffffff; font-size:30px; font-family:Arial, Helvetica, sans-serif; margin-left:30px;}
+
+.store_pricings { float:left; width:400px; }
+
+.content_pricing tr:nth-child(even) {background: #f9f8f8}
+.content_pricing tr:nth-child(odd) {background: #CCC}
+.content_pricing{ width:980px; float:left; font-size:13px; font-family:Arial, Helvetica, sans-serif; line-height:24px;}
+
+.content_pricing input{ width:40px; height:22px;}
+.content_pricing a img{ border:solid 1px #e9e7e7;}
+.content_pricing a img:hover{ border:solid 1px #000000;}
+
+.eb2g_main_titles{ width:980px; float:left;}
+.eb2g_main_titles h3{ font-size:25px; font-family:Arial, Helvetica, sans-serif; color:#282828; line-height:20px;}
