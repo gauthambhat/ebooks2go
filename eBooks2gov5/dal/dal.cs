@@ -358,6 +358,7 @@ namespace eBooks2goV5.dal
             {
                 cmd.Dispose();
                 con.Close();
+                //con.Close();
                 con.Dispose();
             }
         }
