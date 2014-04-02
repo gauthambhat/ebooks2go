@@ -19,6 +19,11 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1001,6 +1006,7 @@
     <None Include="manuscriptdocuments\ReportTableWithoutPageBreaks.pdf" />
     <None Include="manuscriptdocuments\themedata.thmx" />
     <None Include="manuscriptdocuments\trebuc.ttf" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
     <None Include="signin\DroidSans.ttf" />
   </ItemGroup>
   <ItemGroup>
